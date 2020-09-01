@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.1)  1 SEP 2020 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.1)  1 SEP 2020 20:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1648,15 +1648,15 @@ l.156 ... \begin{pmatrix} 1 \\ 1 \\ 1\end{pmatrix}
 ./Assignment 1.tex:163: Missing $ inserted.
 <inserted text> 
                 $
-l.163 x*\begin{pmatrix}
-                        1 \\ 1\\ 1 \end{pmatrix}=\begin{pmatrix} x \\ x\\ x ...
+l.163 x\begin{pmatrix}
+                       1 \\ 1\\ 1 \end{pmatrix}=\begin{pmatrix} x \\ x\\ x \...
 
 ? 
 ./Assignment 1.tex:163: Missing $ inserted.
 <inserted text> 
                 $
-l.163 x*\begin{pmatrix} 1 \\ 1\\ 1 \end{pmatrix}
-                                                =\begin{pmatrix} x \\ x\\ x ...
+l.163 x\begin{pmatrix} 1 \\ 1\\ 1 \end{pmatrix}
+                                               =\begin{pmatrix} x \\ x\\ x \...
 
 ? 
 ./Assignment 1.tex:163: Missing $ inserted.
@@ -1670,6 +1670,18 @@ l.163 ... 1 \\ 1\\ 1 \end{pmatrix}=\begin{pmatrix}
                 $
 l.163 ...=\begin{pmatrix} x \\ x\\ x \end{pmatrix}
                                                   \\
+? 
+./Assignment 1.tex:167: Missing $ inserted.
+<inserted text> 
+                $
+l.167 \norm{\vec{x}}
+                    =1(\\
+? 
+./Assignment 1.tex:171: Missing $ inserted.
+<inserted text> 
+                $
+l.171 $\sqrt{3x^2}
+                  $=1
 ? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 158--172
@@ -1694,16 +1706,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--172
 
 Underfull \hbox (badness 6825) in paragraph at lines 158--172
 \OT1/txr/m/n/12 2 Cal-cu-late the mag-ni-tude of the re-sul-tant
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--172
-
  []
 
 
@@ -1752,26 +1754,26 @@ Package rerunfilecheck Info: File `"Assignment 1".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 40097 strings out of 480608
- 908561 string characters out of 5903631
- 1323065 words of memory out of 5000000
+ 40099 strings out of 480608
+ 908572 string characters out of 5903631
+ 1324065 words of memory out of 5000000
  55176 multiletter control sequences out of 15000+600000
- 593114 words of font info for 148 fonts, out of 8000000 for 9000
+ 594464 words of font info for 150 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  60i,7n,91p,418b,1012s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2020/texmf-di
-st/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2020/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/ur
-w/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on "Assignment 1.pdf" (1 page, 46399 bytes).
+exlive/2020/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/time
+s/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Assignment 1.pdf" (1 page, 51048 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
