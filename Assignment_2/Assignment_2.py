@@ -1,11 +1,10 @@
-
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 #taking k as 1 and -1
-d="abc"
-ax.plot(1,2,3,label='Given Point',marker = 'o')
+
+ax.plot(1,2,3,label='Given Point')
 
 
 ax.plot([-2, 4], # x
