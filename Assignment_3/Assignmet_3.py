@@ -7,5 +7,3 @@ compare = result == result1
 result3 = compare.all()
 if result3!="true":
     print("Non Commutative")
-print(result)
-print(result1)
