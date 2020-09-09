@@ -141,49 +141,52 @@
  \section{\textbf{Problem}}
 Find the area of the region bounded by the circle $\bf{x}^{T}$ $\bf{x}$= 2 and \norm{\vec{x}-\myvec{2\\0}}=2.
  \section{\textbf{Solution}}
-\vec{x}^{T}\vec{x}-2\vec(O)^{T}\vec{x}+\norm{\vec{O}}^2-\vec{r}^2=0\\
+ \norm{\vec{x}}^2 + 2\vec{u}^T\vec{x} + f = 0\\
  $So from above equation we can say that,
  \subsection{Circle 1}
- Equation of circle 1:
+ Taking equation of the first circle to be,
  \begin{align}
- \bf{x}^{T}\bf{x}= 2
+ \norm{\vec{x}}^2 + 2\vec{u}_1^T\vec{x} + f_1 = 0\\
+ {\vec{x}^{T}\vec{x}}-2=0 \text{(given)}
  \end{align}
- radius=$\sqrt{2}$ and point of origin as (0,0)
+ From above equations we can say that,$f_1$ is -2 and
+ radius=$\sqrt{2}$.Point of origin as (0,0).\\
  \subsection{Circle 2}
- Equation of circle 2:
+Taking equation of the second circle to be,
 \begin{align}
-  \norm{\vec{x}-\myvec{2\\0}}^2\\
-  {\vec{x}^{T}\vec{x}-2\myvec{2\\0}^T\vec{x}}+2-4=0\\
-  {\vec{x}^{T}\vec{x}-\myvec{4\\0}^T\vec{x}}-2=0\\
+\norm{\vec{x}}^2 + 2\vec{u}_2^T\vec{x} + f_2 = 0\\
+  \norm{\vec{x}-\myvec{2\\0}}^2 \text{(given)}\\
+  {\vec{x}^{T}\vec{x}-2\vec{u}^T\vec{x}}-(\norm{x}+f_2)=0
   \end{align}
-radius=2 and point of origin as (2,0)
+radius=2 and point of origin as (2,0).
  \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\columnwidth]{Assignment_5.png}
 	\caption{Figure depicting intersection points of circle}
 	\label{myfig}
 \end{figure}
-Subtracting equation 2.0.4 from 2.0.1 We get,
+Now,Subtracting equation \eqref{2.2.3} from \eqref{2.1.2} We get,
  \begin{align}
- {\vec{x}^{T}\vec{x}-\myvec{4\\0}^T\vec{x}}-2-\bf{x}^{T}\bf{x}-2=0\\
- \myvec{4&0}\vec{x}=0
+ {\vec{x}^{T}\vec{x}-2\vec{u}^T\vec{x}}-f_1-\bf{x}^{T}\bf{x}-(\norm{x}+f_2)=0\\
+ 2\vec{u}^{T}\vec{x}=0\\
+ \myvec{0&4}\vec{x}=0\text{(Substituting \eqref{} in \eqref{})}
  \end{align}
  Which can be written as:-
  \begin{align}
  \myvec{1&0}\vec{x}=0\\
- \vec{x} = \lambda \vec{m}, where \vec{m} = \myvec{0\\1}\\
+ \vec{x} = \lambda \vec{m}, \text{where} \vec{m} = \myvec{0\\1}\\
  \vec{x} = \lambda \myvec{0\\1}
  \end{align}
- Substituting 2.2.9 in 2.1.1\\
+ Substituting \eqref{2.2.9} in \eqref{2.1.2}\\
  \begin{align}
  \lambda\myvec{0\\1}\lambda\myvec{0&1}=2\\
  \lambda=\sqrt{2}
  \end{align}
- Substituting the value of $\lambda$ in x
+ Substituting the value of \eqref{} in \eqref{}
  \begin{align}
  \vec{\lambda} = +\sqrt{2}\myvec{0\\1} and - \sqrt{2}\myvec{0\\1}
  \end{align}
- Now to find the area inclosed between these circles we have to find the integral of these point w.r.t the circles.For this we need to find the area of segment  and double it to find the area of the entire overlapped region. To find the area of segment we need angle segment makes.Here,r=$\sqrt{2}$ and $\theta$=angle of segment.Now we have to find the angle:\\ 
+ Now to find the area enclosed between these circles we have to find the integral of these point w.r.t the circles.For this we need to find the area of segment  and double it to find the area of the entire overlapped region. To find the area of segment we need angle segment makes.Here,r=$\sqrt{2}$ and $\theta$=angle of segment.Now we have to find the angle.\\ 
 \sin \theta=\frac{\vec{P}}{\vec{H}}\\ 
 \theta$=90^${\circ}$\\
 Total angle=180\\
