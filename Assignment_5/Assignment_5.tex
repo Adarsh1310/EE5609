@@ -149,7 +149,7 @@ Find the area of the region bounded by the circle $\bf{x}^{T}$ $\bf{x}$= 4 and \
  \norm{\vec{x}}^2 + 2\vec{u}_1^T\vec{x} + f_1 = 0\\
  {\vec{x}^{T}\vec{x}}-4=0 \text{(given)}\\
  \vec{u_1}=\myvec{0\\0}\\
- \vec{f_1}=-4
+ f_1=-4
  \end{align}
  
  \subsection{Circle 2}
@@ -158,7 +158,7 @@ Taking equation of the second circle to be,
   \norm{\vec{x}-\myvec{2\\0}}=2 \text{(given)}\\
   {\vec{x}^{T}\vec{x}+2\vec{u_2}^T\vec{x}}=0\\
   \vec{u_2}=\myvec{2\\0}\\
- \vec{f_2}=0
+ f_2=0
   \end{align}
 
  \begin{figure}[h!]
@@ -179,23 +179,12 @@ Now,Subtracting equation \eqref{2.2.3} from \eqref{2.1.2} We get,
  \vec{x} = \lambda \vec{m}, \text{where} \vec{m} = \myvec{0\\1}\\
  \vec{x} = \lambda \myvec{0\\1}
  \end{align}
- Substituting 2.2.10 in 2.1.1\\
- \begin{align}
- \norm{\vec{x}}^2 + 2\vec{u}_1^T\vec{x} + f_1 = 0\\
-  \lambda_1^{2}+\lambda_1\myvec{4&0}\myvec{0\\1}=4\\
- \lambda_1=+2,-2
- \end{align}
-  Substituting 2.2.9 in 2.2.14
+ Substituting 2.2.9 in 2.2.14
   \begin{align}
-  \vec{x}^T\vec{x} - \vec{f_2} = 0\\
- \vec{\lambda_2\norm{\vec{m}}}^T\vect{\lambda_2\norm{\vec{m}}} -\vec{ f_2} = 0\\
-\vec{\lambda_2}=\frac{\vec{f_2}}{\norm{m}^T-\norm{m}}\\
+  \vec{x}^T\vec{x} - f_2 = 0\\
+ \vec{\lambda_2\norm{\vec{m}}}\vect{\lambda_2\norm{\vec{m}}} - f_2 = 0\\
+\lambda_2^2\norm{\vec{m}}^2=f_2 (\tex{\because f_2=0})\\
 \lambda_2=0
- \end{align}
-
- Substituting the value of 2.2.13 in 2.2.10
- \begin{align}
- \vec{\lambda} = +2\myvec{0\\1} and - 2\myvec{0\\1}
  \end{align}
  Now finding direction vector between two lines\\
  \begin{align}
@@ -216,6 +205,5 @@ Area={\frac{1}{2}}(\frac{\pi}{2}-\sin 180)2\\
 Total area=2*Area\\
 =\frac{2\pi-4}{2}
 \end{align}
-
-\norm{\vec{x}-\vec{2\\0}}^2 = {\vec{x}-\myvec{2\\0}}^T{\vec{x}-\myvec{2\\0}}
+ 
   \end{document}
