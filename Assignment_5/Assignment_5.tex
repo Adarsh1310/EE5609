@@ -162,7 +162,7 @@ Taking equation of the second circle to be,
   \end{align}
  \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\columnwidth]{plot_circle_matplotlib_02.png}
+	\includegraphics[width=\columnwidth]{Assignment.png}
 	\caption{Figure depicting intersection points of circle}
 	\label{myfig}
 \end{figure}
@@ -175,39 +175,42 @@ Now,Subtracting equation \eqref{2.2.3} from \eqref{2.1.2} We get,
  Which can be written as:-
  \begin{align}
  \myvec{-1&0}\vec{x}=-1\\
- \vec{x} = \lambda \vec{m}, \text{where} \vec{m} = \myvec{1\\0}\\
- \vec{x} = \lambda \myvec{1\\0}\
+ \vec{x} = \lambda \vec{m}+q, \text{where} \vec{m} = \myvec{0\\1}-1\\
+ \vec{x} = \lambda \myvec{0\\1}-1\
  \end{align}
  Substituting 2.2.7 in 2.2.2
   \begin{align}
   {\vec{x}^{T}\vec{x}+2\vec{u_2}^T\vec{x}}=0\\
- \lambda_2^2-4\lambda=0\\
-\lambda_2=0,4
+(q+\lamda\vec{m})^2(q+\lamda{m})+2\vec{u}^T(q+\lembda\vec{m})=0\\
+\end{align}
+Substituting the value of $\lambda$,$\vec{u}$ and q and solving\\
+\begin{align}
+\lambda^2-4+1=0\\
+\lambda^2-3=0\\
+\lambda^2=3\\
+\lambda=\sqrt{3},-\sqrt{3}
  \end{align}
- Substituting 2.2.7 in 2.1.2
- \begin{align}
-\vec{x}^{T}\vec{x}-4=0 \\
- \lambda_1^2=4\\
- \lambda_1=+2,-2
- \end{align}
- Now finding direction vector between two lines\\
- \begin{align}
- \end{align}
- Now to find the area enclosed between these circles we have to find the integral of these point w.r.t the circles.For this we need to find the area of segment and double it to find the area of the entire overlapped region. To find the area of segment we need angle segment makes.Here,r=2 and $\theta$=angle of segment.Now we have to find the angle.\\ 
+Substituting value of \lamda in \eqrt{},Points of intersection come out to be(-1,\sqrt{3}) and(-1,-\sqrt{3}),$Now finding the direction vector between point of intersection and origin of two circle.\\
+ Subtracting Point 1 from point 2 direction vector comes out to be k_1\myvec{0\\ \sqrt{3}}\\
+ $Subtracting both the origin then the vector come out to be k_2\myvec{-2\\0}\\
+ $Now using these to find angle between two vectors by finding inner product:-\\
+\begin{align}
+    \vec{a}\vec{b}=\norm{a}\norm{b}\cos\theta\\
+    \frac{0}{\norm{a}\norm{b}}=\cos\theta\\
+    \theta=90
+\end{align}
+$\theta$ gives the angle segment. We have to Double that to find out area.
 \begin{align*}
 \sin \theta=\frac{\vec{P}}{\vec{H}}\\ 
 \theta=90^{\circ}\\
+Now finding area.
 Total angle=180^{\circ}\\
 \end{align*}
  \begin{align}
- \begin{multlined}
- Area=\frac{1}{2}(\frac{180}{360}\pi-\sin (180))r^{2}\\
- $(Area of Sector-Area of Triangle)$
-\end{multlined}\\
-Area={\frac{1}{2}}(\frac{\pi}{2}-\sin 180)4\\
-=4{\frac{1}{2}}(\frac{\pi}{2}-\sin 180)\\
+Area=Area of sector-Area of Triangle\\
+Area=\frac{\pi\theta}{360}r^2-\frac{1}{2}2\sqrt{3}\\
 Total area=2*Area\\
-=2\pi-4
+=2\pi-2\sqrt{3}
 \end{align}
  
   \end{document}
