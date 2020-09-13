@@ -175,37 +175,17 @@ Now,Subtracting equation \eqref{2.2.2} from \eqref{2.1.2} We get,
  Which can be written as:-
  \begin{align}
  \myvec{-1&0}\vec{x}=-1\\
- \vec{x} = \lambda \vec{m}+q, \text{where} \vec{m} = \myvec{0\\1}-1\label{2.2.9}\\
- \vec{x} = \lambda \myvec{0\\1}-1\label{2.2.10}
+ \vec{x} = \lambda \vec{m}, \text{where} \vec{m} = \myvec{1\\0}\label{2.2.9}\\
+ \vec{x} = \lambda \myvec{1\\0}\label{2.2.10}
  \end{align}
  Substituting \eqref{2.2.9} in \eqref{2.2.2}
   \begin{align}
   {\vec{x}^{T}\vec{x}+2\vec{u_2}^T\vec{x}}=0\\
-(q+\lamda\vec{m})^2(q+\lamda{m})+2\vec{u}^T(q+\lembda\vec{m})=0
+  (\lambda\vec{m})^T (\lambda\vec{m})+2*\vec{u}^T\lambda\vec{m}=0\\
 \end{align}
-Substituting the value of $\lambda$,$\vec{u}$ and q and solving\\
+Substituting the value of $\lambda$,$\vec{u}$ and solving\\
 \begin{align}
-\lambda^2-4+1=0\\
-\lambda^2-3=0\\
-\lambda^2=3\\
-\lambda=\sqrt{3},-\sqrt{3}
- \end{align}
-Substituting value of $\lambda$ in \eqrt{2.2.10},Points of intersection come out to be(-1,\sqrt{3}) and(-1,-\sqrt{3}),$Now finding the direction vector between point of intersection and origin of two circle.
- Subtracting Point 1 from point 2 direction vector comes out to be k_1\myvec{0\\ \sqrt{3}}
- $Subtracting both the origin then the vector come out to be k_2\myvec{-2\\0}
- $Now using these to find angle between two vectors by finding inner product:-\\
-\begin{align}
-    \vec{a}\vec{b}=\norm{a}\norm{b}\cos\theta\\
-    \frac{0}{\norm{a}\norm{b}}=\cos\theta\\
-    \theta=90
-\end{align}
-$\theta$ gives the angle segment. We have to Double that to find out area.
-
- \begin{align}
-Area=Area of sector-Area of Triangle\\
-Area=\frac{\pi\theta}{360}r^2-\frac{1}{2}2\sqrt{3}\\
-Total area=2*Area\\
-=2\pi-2\sqrt{3}
-\end{align}
- 
+\lambda^{2}-4\lambda=0\\
+\lambda=0,4
+ \end{align} 
   \end{document}
