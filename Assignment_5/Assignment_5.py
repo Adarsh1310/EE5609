@@ -34,5 +34,5 @@ plt.plot([0,1],[0, math.sqrt(3)])
 plt.plot([0, 1],[0, -math.sqrt(3)])
 plt.plot([2,1],[0, math.sqrt(3)])
 plt.plot([2, 1],[0, -math.sqrt(3)])
-
+plt.grid()
 plt.show()
