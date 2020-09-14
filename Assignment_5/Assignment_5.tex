@@ -164,15 +164,18 @@ Taking equation of the second circle to be,
   \begin{align}
  \norm{\vec{x}}^2 + 2\vec{u}_1^T\vec{x} + f_1 = 0\\
  \norm{\vec{q}+\lambda\vec{m}}^2 + f_1 = 0\\
- \norm{\myvec{1\\\lambda}}^2-4=0\\
- \lambda^2+1-4=0\\
- \lambda=+\sqrt{3},-\sqrt{3}\\
+ (\vec{q}+\lambda \vec{m})^T(\vec{q}+\lambda \vec{m})+f_1=0\\
+ \vec{q}^T(\vec{q}+\lambda \vec{m})+\lambda \vec{m}^T(\vec{q}+\lambda \vec{m})+f_1=0\\
+ \norm{\vec{q}}^2+\lambda\vec{q}^T\vec{m}+\lambda\vec{m}^T\vec{q}+\lambda^2\norm{\vec{m}}^2+f_1=0\\
+1-4+\lambda^2=0\\
+\lambda^2=3\\
+ \lambda=+\sqrt{3},-\sqrt{3}
  \end{align}
 Substituting the value of $\lambda$ in\eqref{2.2.10}
 \begin{align}
 \vec{x}=\vec{q}+\lambda\vec{m}\\
-For \lambda=\sqrt{3},\vec{A}=\myvec{1\\\sqrt{3}}\\
-For \lambda=-\sqrt{3},\vec{B}=\myvec{1\\-\sqrt{3}}
+\vec{A}=\myvec{1\\\sqrt{3}}\\
+\vec{B}=\myvec{1\\-\sqrt{3}}
  \end{align} 
  Now finding the direction vector $\vec{O_1A}$,$\vec{O_1B}$,$\vec{O_2A}$ and $\vec{O_2B}$.
  \begin{align}
