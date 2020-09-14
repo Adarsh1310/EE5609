@@ -167,7 +167,10 @@ Taking equation of the second circle to be,
  (\vec{q}+\lambda \vec{m})^T(\vec{q}+\lambda \vec{m})+f_1=0\\
  \vec{q}^T(\vec{q}+\lambda \vec{m})+\lambda \vec{m}^T(\vec{q}+\lambda \vec{m})+f_1=0\\
  \norm{\vec{q}}^2+\lambda\vec{q}^T\vec{m}+\lambda\vec{m}^T\vec{q}+\lambda^2\norm{\vec{m}}^2+f_1=0\\
-1-4+\lambda^2=0\\
+ \norm{\vec{q}}^2+2\lambda\vec{q}^T\vec{m}+\lambda^2\norm{\vec{m}}^2+f_1=0 \\
+\lambda(\lambda\norm{\vec{m}}^2+2\vec{q}^T\vec{m})=-f_1-\norm{\vec{q}}^2\\
+\lambda^2\norm{\vec{m}}^2=-f_1-\norm{\vec{q}}^2\\
+\lambda^2=\frac{-f_1-\norm{\vec{q}}^2}{\norm{\vec{m}}^2}\\
 \lambda^2=3\\
  \lambda=+\sqrt{3},-\sqrt{3}
  \end{align}
@@ -179,10 +182,10 @@ Substituting the value of $\lambda$ in\eqref{2.2.10}
  \end{align} 
  Now finding the direction vector $\vec{O_1A}$,$\vec{O_1B}$,$\vec{O_2A}$ and $\vec{O_2B}$.
  \begin{align}
-\vec{O_1A}=\myvec{0\\0}-\myvec{1\\\sqrt{3}}=k_1\myvec{-1\\-\sqrt{3}}\\
-\vec{O_1B}=\myvec{0\\0}-\myvec{1\\-\sqrt{3}}=k_2\myvec{-1\\\sqrt{3}}\\
-\vec{O_2A}=\myvec{2\\0}-\myvec{1\\\sqrt{3}}=k_3\myvec{1\\-\sqrt{3}}\\
-\vec{O_2B}=\myvec{2\\0}-\myvec{1\\-\sqrt{3}}=k_4\myvec{1\\\sqrt{3}}
+\vec{O_1A}=\myvec{0\\0}-\myvec{1\\\sqrt{3}}=\myvec{-1\\-\sqrt{3}}\\
+\vec{O_1B}=\myvec{0\\0}-\myvec{1\\-\sqrt{3}}=\myvec{-1\\\sqrt{3}}\\
+\vec{O_2A}=\myvec{2\\0}-\myvec{1\\\sqrt{3}}=\myvec{1\\-\sqrt{3}}\\
+\vec{O_2B}=\myvec{2\\0}-\myvec{1\\-\sqrt{3}}=\myvec{1\\\sqrt{3}}
 \end{align}
 Now finding the angle $\angle{O_1AB}$.
 \begin{align}
