@@ -197,8 +197,8 @@ Let $\vec{m}_{AC}$ and $\vec{m}_{BE}$ be direction vector of side $\vec{AC}$ and
 Here, $\vec{BE}$  $\perp$ $\vec{AC}$ because $\vec{BE}$ is the altitude to side $\vec{AC}.So,
 
 \begin{align}
-\vec{m}_{AC}\vec{m}_{BE}=0\\
-\vec{(A-C)}\vec{(B-E)}=0\label{2.0.4}
+A_{\triangle{CEB}}=\frac{1}{2}\norm{\vec{A-C}}\norm{\vec{B-E}}\sin\ 90^{\circ}\\
+A_{\triangle{CEB}}=\frac{1}{2}\norm{\vec{A-C}}\norm{\vec{B-E}}\label{2.0.4}
 \end{align}
 Let $\vec{m}_{AB}$ and $\vec{m}_{CF}$ be direction vector of side $\vec{AB}$ and altitude $\vec{CF}$ respectively.
 \begin{align}
@@ -207,14 +207,19 @@ Let $\vec{m}_{AB}$ and $\vec{m}_{CF}$ be direction vector of side $\vec{AB}$ and
 \end{align}
 Here, $\vec{CF}$  $\perp$ $\vec{AB}$ because $\vec{CF}$ is the altitude to side $\vec{AB}$.So,
 \begin{align}
-\vec{m}_{AB}\vec{m}_{CF}=0\\
-\vec{(A-B)}\vec{(C-F)}=0\label{2.0.8}
+A_{\triangle{BFC}}=\frac{1}{2}\norm{\vec{A-B}}\norm{\vec{C-F}}\sin\ 90^{\circ}\\
+A_{\triangle{BFC}}=\frac{1}{2}\norm{\vec{A-B}}\norm{\vec{C-F}}\label{2.0.8}
 \end{align}
-Comparing \eqref{2.0.4} and \eqref{2.0.8}
+Comparing $\triangle{CEB}$ and $\triangle{BFC}$
 \begin{align}
-\vec{(A-C)}\vec{(B-E)}=\vec{(A-B)}\vec{(C-F)}\\
-\vec{(B-E)}=\vec{(C-F)} [\because \vec{m}_{AB}=\vec{m}_{AC}]\\
-\vec{m}_{BE}=\vec{m}_{CF}
+\angle{ECB}=\angle{FBC}\\
+\angle{CEB}=\angle{BFC}\\
+BC=BC
 \end{align}
-Hence,we can say that these altitudes are equal.
+By, AAS property $\triangle{CEB}$ $\cong$ $\triangle{BFC}$ and hence they will have equal area.Now by using \eqref{2.0.4} and \eqref{2.0.8}
+\begin{align}
+\frac{1}{2}\norm{\vec{A-C}}\norm{\vec{B-E}}=\frac{1}{2}\norm{\vec{A-B}}\norm{\vec{C-F}}\\
+\norm{\vec{B-E}}=\norm{\vec{C-F}}[\because \norm{\vec{m}_{AB}}=\norm{\vec{m}_{AC}}]
+\end{align}
+Hence, the altitudes drawn to equal sides of isosceles triangle are equal.
 \end{document}
