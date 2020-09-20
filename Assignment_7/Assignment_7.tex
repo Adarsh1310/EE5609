@@ -132,19 +132,6 @@ Equation \eqref{2.1} can be expressed as
 y(x-2)=x-1\\
 yx-2y-x+1=0\label{2.0.3}
 \end{align}
-The general equation of second degree is given by,
-\begin{align}
-ax^2+2bxy+cy^2+2dx+2ey+f=0
-\end{align}
-and can be expressed as
-\begin{align}
-\vec{x}^T\vec{V}\vec{x}+2\vec{u}^T\vec{x}+f=0
-\end{align}
-where,
-\begin{align}
-\vec{V}=\vec{V}^T=\myvec{a&b\\b&c}\\
-\vec{u}=\myvec{d&e}
-\end{align}
 From above we can say,
 \begin{align}
 \vec{V}=\frac{1}{2}\myvec{0 & 1\\ 1 & 0}\\
@@ -203,16 +190,15 @@ We can say that
  \vec{D} &= \myvec{\lambda_1 & 0 \\ 0 & \lambda_2} =\myvec{\frac{1}{2} & 0\\ 0 & -\frac{1}{2}}
 \end{align}
 \because \vec{u}^T\vec{V}^{-1}\vec{u}-f > 0 ,$there isn't a need to swap axes.$
-
-In hyperbola,
+$In hyperbola,
 \begin{align}
 \vec{c}=-\vec{V}^-1\vec{u}\\
 axes=
 \begin{cases}
 \sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u}-f}{\lambda_1}}\\ \sqrt{\frac{f-\vec{u}^T\vec{V}^{-1}\vec{u}}{\lambda_2}}
 \end{cases}
-\end{align}
-From above equations we can say that,
+\end{align}$
+$From above equations we can say that,
 \begin{align}
 \vec{c}=\myvec{-2\\-1}\\
 \sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u}-f}{\lambda_1}}=\sqrt{2}\\
@@ -222,24 +208,24 @@ with the standard hyperbola equation becoming
 \begin{align}
 \frac{x^2}{2}-\frac{y^2}{2} = 1,
 \label{2.0.30}
-\end{align}
-Let us assume slope to be l,now finding the direction vector and normal vector of the tangent with slope l.
+\end{align}$
+$Let us assume slope to be l,now finding the direction vector and normal vector of the tangent with slope l.
 \begin{align}
-\vec{m}=\myvec{1\\l}\\
-\vec{n}=\myvec{l\\-1}
-\end{align}
-Now considering the equations to find point of contact
+\vec{m}=\myvec{1\\l}\label{2.0.27}\\
+\vec{n}=\myvec{l\\-1}\label{2.0.28}
+\end{align}$
+$Now considering the equations to find point of contact
 \begin{align} \vec{q} = \vec{V}^{-1}\brak{\kappa \vec{n}-\vec{u}}\label{2.0.33}
 \\
 \kappa = \pm \sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u}-f}{\vec{n}^T\vec{V}^{-1}\vec{n}}} \label{2.0.34}
-\end{align}
-By using \eqref{2.0.34}
+\end{align}$
+$By using \eqref{2.0.34}
 \begin{align}
 \kappa=\sqrt{-\frac{1}{4l}}
 \end{align}
 Now substituting this $\kappa$ in \eqref{2.0.33}
 \begin{align}
-q=\myvec{-2\sqrt{-\frac{1}{4l}}+2\\2\sqrt{\frac{-l}{4}}+1}
+\vec{q}=\myvec{-2\sqrt{-\frac{1}{4l}}+2\\2\sqrt{\frac{-l}{4}}+1}
 \end{align}
 We know that x=10.
 \begin{align}
@@ -248,8 +234,22 @@ We know that x=10.
 \sqrt{-\frac{1}{4l}}=4\\
 -\frac{1}{4l}=16\\
 l=-\frac{1}{64}
+\end{align}$
+$The slope of the tangent to the curve y=$\frac{x-1}{x-2}$, x$\not=$2 at x=10 is $\frac{1}{64}$.
+So,from the above we can say that $\kappa$=4,-4 and from equation \eqref{2.0.27} and \eqref{2.0.28} direction and normal vectors will come out to be
+\begin{align}
+\vec{m}=\myvec{1\\-\frac{1}{64}}\\
+\vec{n}=\myvec{-\frac{1}{64}\\-1}
 \end{align}
-The slope of the tangent to the curve y=$\frac{x-1}{x-2}$, x$\not=$2 at x=10 is $\frac{1}{64}$.
+Now using equation \eqref{2.0.33}
+\begin{align}
+\vec{q}_1 = \vec{V}^{-1}\brak{\kappa_1 \vec{n}-\vec{u}}\\
+\vec{q}_1 = \myvec{0&2\\2&0}\brak{-4 \myvec{-\frac{1}{64}\\-1}-\myvec{-\frac{1}{2}\\-1}}\\
+\vec{q}_1=\myvec{10\\ \frac{9}{8}}\\
+\vec{q}_2 = \vec{V}^{-1}\brak{\kappa_2 \vec{n}-\vec{u}}\\
+\vec{q}_2 = \myvec{0&2\\2&0}\brak{4 \myvec{-\frac{1}{64}\\-1}-\myvec{-\frac{1}{2}\\-1}}\\
+\vec{q}_2=\myvec{-6\\ \frac{7}{8}}\\
+\end{align}
   \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\columnwidth]{Assignment_7.png}
