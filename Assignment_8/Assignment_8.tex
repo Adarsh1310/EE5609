@@ -131,24 +131,28 @@ Find QR decomposition of \myvec{1&-1\\2&3}
 \end{align}
 We can express these as
 \begin{align}
-$\alpha$=k_1\vec{u}_1\label{2.0.3}\\
-$\beta$=r_1\vec{u}_1+k_2\vec{u}_2\label{2.0.4}
+\alpha=k_1\vec{u}_1\label{2.0.3}\\
+\beta=r_1\vec{u}_1+k_2\vec{u}_2\label{2.0.4}
 \end{align}
 where 
 \begin{align}
-k_1 = \norm{\alpha}\\\vec{u}_1 = \frac{\vec{\alpha}}{k_1} 
+k_1 = \norm{\alpha}\label{2.0.5}\\\vec{u}_1 = \frac{\vec{\alpha}}{k_1} 
 \\
 r_1 = \frac{\vec{u}_1^T\beta}{\norm{\vec{u}_1}^2}\\
 \vec{u}_2 = \frac{\beta - r_1 \vec{u}_1}{\norm{\beta - r_1 \vec{u}_1}}
 \\
-k_2 = {\vec{u}_2^T\beta}
+k_2 = {\vec{u}_2^T\beta}\label{2.0.9}
 \end{align}
 From \eqref{2.0.3} and \eqref{2.0.4}, 
 \begin{align}
 \myvec{\alpha & \beta } = \myvec{\vec{u}_1 & \vec{u}_2}\myvec{k_1 & r_1 \\ 0 & k_2} \\
 \myvec{\alpha & \beta } = \vec{Q}\vec{R}
 \end{align}
-From above we can see that $\vec{R}$ is an upper triangular matrix and $\vec{Q}$^T\vec{Q}=$\vec{I}
+From above we can see that $\vec{R}$ is an upper triangular matrix and
+\begin{align}
+\vec{Q}^T\vec{Q}=\vec{I}
+\end{align}
+Now by using equations \eqref{2.0.5} to \eqref{2.0.9} 
 \begin{align}
 k_1 = \sqrt{5}\\ \vec{u}_1 = \sqrt{\frac{1}{5}} \myvec{1\\2},
 \\
