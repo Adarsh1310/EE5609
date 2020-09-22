@@ -1,0 +1,213 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+ \usepackage{setspace}
+ \usepackage{gensymb}
+ \usepackage{graphicx}
+ \singlespacing
+\graphicspath{ {/user/adarshsrivastava/desktop/Matrix Theory/Assignemnt_7} }
+ \usepackage[cmex10]{amsmath}
+ \usepackage{amsthm}
+ \usepackage{hyperref}
+ \usepackage{mathrsfs}
+ \usepackage{txfonts}
+ \usepackage{stfloats}
+ \usepackage{bm}
+ \usepackage{cite}
+ \usepackage{cases}
+ \usepackage{subfig}
+ \usepackage{longtable}
+ \usepackage{multirow}
+ \usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{steinmetz}
+ \usepackage{tikz}
+ \usepackage{circuitikz}
+ \usepackage{verbatim}
+ \usepackage{tfrupee}
+ \usepackage[breaklinks=true]{hyperref}
+ \usepackage{tkz-euclide}
+ \usetikzlibrary{calc,math}
+ \usepackage{listings}
+     \usepackage{color}                                            %%
+     \usepackage{array}                                            %%
+     \usepackage{longtable}                                        %%
+     \usepackage{calc}                                             %%
+     \usepackage{multirow}                                         %%
+     \usepackage{hhline}                                           %%
+     \usepackage{ifthen}                                           %%
+     \usepackage{lscape}     
+ \usepackage{multicol}
+ \usepackage{chngcntr}
+ \DeclareMathOperator*{\Res}{Res}
+ \renewcommand\thesection{\arabic{section}}
+ \renewcommand\thesubsection{\thesection.\arabic{subsection}}
+ \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+ \renewcommand\thesectiondis{\arabic{section}}
+ \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+ \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+ \hyphenation{op-tical net-works semi-conduc-tor}
+ \def\inputGnumericTable{}                                 %%
+ \lstset{
+ %language=C,
+ frame=single, 
+ breaklines=true,
+ columns=fullflexible
+ }
+ \begin{document}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{problem}{Problem}
+ \newtheorem{proposition}{Proposition}[section]
+ \newtheorem{lemma}{Lemma}[section]
+ \newtheorem{corollary}[theorem]{Corollary}
+ \newtheorem{example}{Example}[section]
+ \newtheorem{definition}[problem]{Definition}
+ \newcommand{\BEQA}{\begin{eqnarray}}
+ \newcommand{\EEQA}{\end{eqnarray}}
+ \newcommand{\define}{\stackrel{\triangle}{=}}
+ \bibliographystyle{IEEEtran}
+ \providecommand{\mbf}{\mathbf}
+ \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+ \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+ \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+ \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+ \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+ \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+ \providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+ \providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+ \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+ \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+ \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+ \theoremstyle{remark}
+ \newtheorem{rem}{Remark}
+ \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+ \providecommand{\abs}[1]{\left\vert#1\right\vert}
+ \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+ \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+ %\providecommand{\norm}[1]{\lVert#1\rVert}
+ \providecommand{\mtx}[1]{\mathbf{#1}}
+ \providecommand{\mean}[1]{E\left[ #1 \right]}
+ \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+ %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+ \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+ 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+ \newcommand{\solution}{\noindent \textbf{Solution: }}
+ \newcommand{\cosec}{\,\text{cosec}\,}
+ \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+ \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+ \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+ \numberwithin{equation}{subsection}
+ \makeatletter
+ \@addtoreset{figure}{problem}
+ \makeatother
+ \let\StandardTheFigure\thefigure
+ \let\vec\mathbf
+ \renewcommand{\thefigure}{\theproblem}
+ \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+      \def\rightbox#1{\makebox[0in][r]{#1}}
+      \def\centbox#1{\makebox[0in]{#1}}
+      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+ \vspace{3cm}
+ \title{Assignment 9}
+ \author{Adarsh Srivastava}
+ \maketitle
+ \newpage
+ \bigskip
+ %\renewcommand{\thefigure}{\theenumi}
+ \renewcommand{\thetable}{\theenumi}
+ The link to the solution is
+ \begin{lstlisting}
+  https://github.com/Adarsh1310/EE5609
+ \end{lstlisting}
+ \begin{abstract}
+ This documents solves a Singular Value decomposition problem.
+ \end{abstract}
+  \section{\textbf{Problem}}
+Find the shortest distance between the lines
+\begin{align}
+\vec{x}=\myvec{1\\1\\0}+\lambda_1\myvec{2\\-1\\1}\\
+\vec{x}=\myvec{2\\1\\-1}+\lambda_2\myvec{3\\-5\\2}
+\end{align}
+ \section{\textbf{Solution}}
+The lines will intersect if
+\begin{align}
+\myvec{1\\1\\0}+\lambda_1\myvec{2\\-1\\1}=\myvec{2\\1\\-1}+\lambda_2\myvec{3\\-5\\2}\\
+\myvec{2&3\\-1&-5\\1&2}\myvec{\lambda_1\\\lambda_2}=\myvec{1\\0\\-1}\\
+\vec{A}\lambda=\vec{b}
+\end{align}
+Since the rank of augmented matrix will be 3. We can say that lines do not intersect.
+\begin{align}
+\vec{A}=\vec{U}\vec{S}\vec{V}^T\label{2.0.4}
+\end{align}
+Where the columns of $\vec{V}$ are the eigenvectors of $\vec{A}^T\vec{A}$ ,the columns of $\vec{U}$ are the eigenvectors of $\vec{A}\vec{A}^T$ and $\vec{S}$ is diagonal matrix of singular value of eigenvalues of $\vec{A}^T\vec{A}$.
+\begin{align}
+\vec{A}^T\vec{A}=\myvec{6&13\\13&38}\\
+\vec{A}\vec{A}^T=\myvec{13&-17&8\\1-17&26&-11\\8&-11&5}
+\end{align}
+Eigen vectors of $\vec{A}$^T$\vec{A}.
+\begin{align}
+\begin{vmatrix}
+6-\lambda&13\\13&38-\lambda
+\end{vmatrix}
+\lambda^2-44\lambda+59=0\\
+\lambda_1=42.615,\lambda_2=1.3844
+\end{align}
+Hence,The eigenvectors will be
+\begin{align}
+\vec{v}_1=\myvec{0.35504\\1},
+\vec{v}_2=\myvec{-2.8165\\1}
+\end{align}
+Normalising the eigenvectors
+\begin{align}
+l_1=\sqrt{0.3550^2+1^2}=1.0611\\
+\vec{v}_1=\frac{1}{1.0611}\myvec{0.35504\\1}\\
+\vec{v}_1=\myvec{0.3345\\0.9423}\\
+l_2=\sqrt{-2.8165^2+1^2}=2.9888\\
+\vec{v}_2=\frac{1}{2.9888}\myvec{-2.8165\\1}\\
+\vec{v}_2=\myvec{-0.9423\\0.3345}
+\end{align}
+From here we can say that
+\begin{align}
+\vec{V}=\myvec{0.3345&-0.9423\\0.9423&0.3345}
+\end{align}
+Eigen vectors of $\vec{A}$$\vec{A}^T.$
+\begin{align}
+\begin{vmatrix}
+13-\lambda&-17&8\\17&26-\lambda&-11\\8&-11&5-\lambda
+\end{vmatrix}
+-\lambda^3+44\lambda^2-59\lambda=0\\
+\lambda_1=0,\lambda_2=0.13844,\lambda_3=42.61552
+\end{align}
+Hence,The eigenvectors will be
+\begin{align}
+\vec{v}_1=\myvec{1.5753\\-2.273\\1}
+\vec{v}_2=\myvec{3.2273\\2.6738\\1}
+\vec{v}_3=\myvec{-0.4285\\0.1428\\1}
+\end{align}
+Normalising the eigenvectors
+\begin{align}
+l_1=\sqrt{1.5753^2+-2.2738^2+1^2}=2.9414\\
+\vec{v}_1=\frac{1}{2.9414}\myvec{1.5753\\-2.273\\1}\\
+\vec{v}_1=\myvec{0.5355\\-0.7730\\0.3399}\\
+l_2=\sqrt{3.2246^2+-2.6738^2+1^2}=4.3067\\
+\vec{v}_2=\frac{1}{4.3067}\myvec{3.2273\\2.6738\\1}\\
+\vec{v}_2=\myvec{0.7487\\0.6208\\0.2321}\\
+l_3=\sqrt{-0.4285^2+0.1428^2+1^2}=1.0973\\
+\vec{v}_3=\frac{1}{1.0973}\myvec{-0.4285\\0.1428\\1}\\
+\vec{v}_3=\myvec{-0.3905\\0.1301\\0.9113}
+\end{align}
+\begin{align}
+\vec{U}=\myvec{0.5355&-0.7487&-0.3905\\-0.7730&-0.6208&0.1301\\0.3399&-0.2321&0.9113}
+\end{align}
+Now,
+\begin{align}
+\vec{S}=\myvec{\sqrt{42.615}&0\\0&\sqrt{1.3844}\\0&0}
+\end{align}
+So,from equation \eqref{2.0.4}
+\begin{align}
+\begin{multlined}
+\myvec{2&3\\-1&-5\\1&2}=\\
+\myvec{0.5355&-0.7487&-0.3905\\-0.7730&-0.6208&0.1301\\0.3399&-0.2321&0.9113}\\
+\myvec{\sqrt{42.615}&0\\0&\sqrt{1.3844}\\0&0}\\\myvec{0.3345&-0.9423\\0.9423&0.3345}^T
+\end{multlined}
+\end{align}
+ \end{document}
