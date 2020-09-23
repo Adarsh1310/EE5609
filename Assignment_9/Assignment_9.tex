@@ -131,8 +131,8 @@ Find the shortest distance between the lines
 The lines will intersect if
 \begin{align}
 \myvec{1\\1\\0}+\lambda_1\myvec{2\\-1\\1}=\myvec{2\\1\\-1}+\lambda_2\myvec{3\\-5\\2}\\
-\myvec{2&3\\-1&-5\\1&2}\myvec{\lambda_1\\\lambda_2}=\myvec{1\\0\\-1}\\
-\vec{A}\lambda=\vec{b}
+\myvec{2&3\\-1&-5\\1&2}\myvec{x_1\\x_2}=\myvec{1\\0\\-1}\\
+\vec{A}\vec{x}=\vec{b}
 \end{align}
 Since the rank of augmented matrix will be 3. We can say that lines do not intersect.
 \begin{align}
@@ -143,7 +143,7 @@ Where the columns of $\vec{V}$ are the eigenvectors of $\vec{A}^T\vec{A}$ ,the c
 \vec{A}^T\vec{A}=\myvec{6&13\\13&38}\\
 \vec{A}\vec{A}^T=\myvec{13&-17&8\\-17&26&-11\\8&-11&5}
 \end{align}
-Eigen vectors of $\vec{A}$^T$\vec{A}.
+Calculating $\vec{A}$^T$\vec{A}.
 \begin{align}
 \begin{vmatrix}
 6-\lambda&13\\13&38-\lambda
@@ -157,7 +157,7 @@ Eigen vectors of $\vec{A}$$\vec{A}^T.$
 13-\lambda&-17&8\\17&26-\lambda&-11\\8&-11&5-\lambda
 \end{vmatrix}
 -\lambda^3+44\lambda^2-59\lambda=0\\
-\lambda_2=-5\sqrt{17}+22,\lambda_1=5\sqrt{17}+22,\lambda_3=0,
+\lambda_4=-5\sqrt{17}+22,\lambda_3=5\sqrt{17}+22,\lambda_5=0,
 \end{align}
 Hence,The eigenvectors will be
 \begin{align}
@@ -202,8 +202,9 @@ Now, \vec{V}=$\vec{A}^T$$\frac{\vec{u_i}}{\sqrt{\lambda_i}}$
 \begin{align}
 \vec{V}=\myvec{\frac{\sqrt{17}+28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}&\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}\\\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}&\frac{-\sqrt{17}-28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}}
 \end{align}
+We,know that,
+\vec{x}=$\vec{V}(\vec{S}_+(\vec{U}^T\vec{b}))$
 \begin{align}
-\vec{x}=\vec{V}(\vec{S}_+(\vec{U}^T\vec{b}))\\
 \vec{U}^T\vec{b}=\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}}\\\frac{-10}{\sqrt{59}}}\\
 \vec{S}_+(\vec{U}^T\vec{b})=\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}}\\
 \begin{multlined}
