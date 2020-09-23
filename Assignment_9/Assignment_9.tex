@@ -151,24 +151,6 @@ Eigen vectors of $\vec{A}$^T$\vec{A}.
 \lambda^2-44\lambda+59=0\\
 \lambda_1=-5\sqrt{17}+22,\lambda_2=5\sqrt{17}+22
 \end{align}
-Hence,The eigenvectors will be
-\begin{align}
-\vec{v}_1=\myvec{\frac{5\sqrt{17}-16}{13}\\1},
-\vec{v}_2=\myvec{\frac{-5\sqrt{17}-16}{13}\\1}
-\end{align}
-Normalising the eigenvectors
-\begin{align}
-l_1=\sqrt{\left(\frac{5\sqrt{17}-16}{13}\right)^2+1^2}=\frac{\sqrt{850-160\sqrt{17}}}{13}\\
-\vec{v}_1=\frac{13}{\sqrt{850-160\sqrt{17}}}\myvec{\frac{5\sqrt{17}-16}{13}\\1}\\
-\vec{v}_1=\myvec{\frac{5\sqrt{17}-16}{\sqrt{850-160\sqrt{17}}}\\\frac{13}{\sqrt{850-160\sqrt{17}}}}\\
-l_2=\sqrt{\left(\frac{-5\sqrt{17}-16}{13}\right)^2+1^2}=\frac{\sqrt{850+160\sqrt{17}}}{13}\\
-\vec{v}_2=\frac{13}{\sqrt{850+160\sqrt{17}}}\myvec{\frac{-5\sqrt{17}-16}{13}\\1}\\
-\vec{v}_2=\myvec{\frac{-5\sqrt{17}-16}{\sqrt{850+160\sqrt{17}}}\\\frac{13}{\sqrt{850+160\sqrt{17}}}}
-\end{align}
-From here we can say that
-\begin{align}
-\vec{V}=\myvec{\frac{5\sqrt{17}-16}{\sqrt{850-160\sqrt{17}}}&\frac{-5\sqrt{17}-16}{\sqrt{850+160\sqrt{17}}}\\\frac{13}{\sqrt{850-160\sqrt{17}}}&\frac{13}{\sqrt{850+160\sqrt{17}}}}
-\end{align}
 Eigen vectors of $\vec{A}$$\vec{A}^T.$
 \begin{align}
 \begin{vmatrix}
@@ -184,7 +166,6 @@ Hence,The eigenvectors will be
 \vec{u}_3=\myvec{\frac{-3}{7}\\\frac{1}{7}\\1}
 \end{align}
 Normalising the eigenvectors
-
 \begin{align}
 l_1=\sqrt{{\left(\frac{12-\sqrt{17}}{5}\right)}^2+{\left(\frac{1-3\sqrt{17}}{5}\right)}^2+1^2}\\
 \vec{u}_1=\myvec{\frac{-\sqrt{17}+12}{\sqrt{340-20\sqrt{17}}}\\\frac{-3\sqrt{17}+1}{\sqrt{340-20\sqrt{17}}}\\\frac{5}{\sqrt{340-20\sqrt{17}}}}\\
@@ -210,17 +191,39 @@ So,from equation \eqref{2.0.4}
 \begin{align}
 \begin{multlined}
 \myvec{2&3\\-1&-5\\1&2}=\\
-\myvec{\frac{-\sqrt{17}+12}{\sqrt{340-20\sqrt{17}}}&\frac{\sqrt{17}+12}{\sqrt{340+20\sqrt{17}}}&\frac{-3}{\sqrt{59}}\\\frac{-3\sqrt{17}+1}{\sqrt{340-20\sqrt{17}}}&\frac{3\sqrt{17}+1}{\sqrt{340+20\sqrt{17}}}&\frac{1}{\sqrt{59}}\\\frac{7}{\sqrt{59}}\\\frac{5}{\sqrt{340-20\sqrt{17}}}&\frac{5}{\sqrt{340+20\sqrt{17}}}&\frac{7}{\sqrt{59}}}\\\myvec{\sqrt{5\sqrt{17}+22}&0\\0&\sqrt{-5\sqrt{17}+22}\\0&0}\\\myvec{\frac{5\sqrt{17}-16}{\sqrt{850-160\sqrt{17}}}&\frac{-5\sqrt{17}-16}{\sqrt{850+160\sqrt{17}}}\\\frac{13}{\sqrt{850-160\sqrt{17}}}&\frac{13}{\sqrt{850+160\sqrt{17}}}}^T
+\myvec{\frac{-\sqrt{17}+12}{\sqrt{340-20\sqrt{17}}}&\frac{\sqrt{17}+12}{\sqrt{340+20\sqrt{17}}}&\frac{-3}{\sqrt{59}}\\\frac{-3\sqrt{17}+1}{\sqrt{340-20\sqrt{17}}}&\frac{3\sqrt{17}+1}{\sqrt{340+20\sqrt{17}}}&\frac{1}{\sqrt{59}}\\\frac{5}{\sqrt{340-20\sqrt{17}}}&\frac{5}{\sqrt{340+20\sqrt{17}}}&\frac{7}{\sqrt{59}}}\\\myvec{\sqrt{5\sqrt{17}+22}&0\\0&\sqrt{-5\sqrt{17}+22}\\0&0}\\\myvec{\frac{5\sqrt{17}-16}{\sqrt{850-160\sqrt{17}}}&\frac{-5\sqrt{17}-16}{\sqrt{850+160\sqrt{17}}}\\\frac{13}{\sqrt{850-160\sqrt{17}}}&\frac{13}{\sqrt{850+160\sqrt{17}}}}^T
 \end{multlined}
 \end{align}
 Now, Finding Moore-Penrose Pseudo inverse of \vec{S}
 \begin{align}
 \vec{S}_+=\myvec{\frac{1}{\sqrt{5\sqrt{17}+22}}&0&0\\0&\frac{1}{\sqrt{-5\sqrt{17}+22}}&0}
 \end{align}
-We will use this Pseudo inverse to find the solution
+Now, \vec{V}=$\vec{A}^T$$\frac{\vec{u_i}}{\sqrt{\lambda_i}}$
 \begin{align}
-\lambda=\vec{V}(\vec{S}_+(\vec{U}^T\vec{b})\\
-=\myvec{0.42\\-0.11}
+\vec{V}=\myvec{\frac{\sqrt{17}+28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}&\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}\\\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}&\frac{-\sqrt{17}-28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}}
 \end{align}
-
+\begin{align}
+\vec{x}=\vec{V}(\vec{S}_+(\vec{U}^T\vec{b}))\\
+\vec{U}^T\vec{b}=\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}}\\\frac{-10}{\sqrt{59}}}\\
+\vec{S}_+(\vec{U}^T\vec{b})=\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}}\\
+\begin{multlined}
+\vec{x}=\myvec{\frac{\sqrt{17}+28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}&\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}\\\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}&\frac{-\sqrt{17}-28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}}\\
+\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}}
+\end{multlined}
+\end{align}
+Now, Verifying the values using
+\begin{align}
+\vec{A}^T\vec{A}\vec{x} = \vec{A}^T\vec{b}
+\end{align}
+Taking R.H.S
+\begin{align}
+=\myvec{1\\1}
+\end{align}
+Taking L.H.S
+\begin{align}
+\begin{multlined}
+\myvec{6&13\\13&38}\\\myvec{\frac{\sqrt{17}+28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}&\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}\\\frac{-\sqrt{17}+26}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}&\frac{-\sqrt{17}-28}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}}\\\myvec{\frac{-\sqrt{17}+7}{\sqrt{340-20\sqrt{17}}\sqrt{5\sqrt{17}+22}}\\\frac{\sqrt{17}+7}{\sqrt{340+20\sqrt{17}}\sqrt{-5\sqrt{17}+22}}}
+\end{multlined}\\
+=\myvec{1\\1}
+\end{align}
  \end{document}
