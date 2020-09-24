@@ -140,10 +140,10 @@ Since the rank of augmented matrix will be 3. We can say that lines do not inter
 \end{align}
 Where the columns of $\vec{V}$ are the eigenvectors of $\vec{A}^T\vec{A}$ ,the columns of $\vec{U}$ are the eigenvectors of $\vec{A}\vec{A}^T$ and $\vec{S}$ is diagonal matrix of singular value of eigenvalues of $\vec{A}^T\vec{A}$.
 \begin{align}
-\vec{M}^T\vec{M}=\myvec{6&13\\13&38}\\
+\vec{M}^T\vec{M}=\myvec{6&13\\13&38}\label{2.0.6}\\
 \vec{M}\vec{M}^T=\myvec{13&-17&8\\-17&26&-11\\8&-11&5}
 \end{align}
-Calculating $\vec{M}$^T$\vec{M}.
+Calculating eigen value of $\vec{M}$^T$\vec{M}.
 \begin{align}
 \begin{vmatrix}
 6-\lambda&13\\13&38-\lambda
@@ -217,14 +217,24 @@ Now, Verifying the values using
 \begin{align}
 \vec{M}^T\vec{M}\vec{x} = \vec{M}^T\vec{b}
 \end{align}
-Taking R.H.S
+Solving R.H.S
 \begin{align}
-=\myvec{1\\1}
+\vec{M}^T\vec{M}\vec{x} =\myvec{1\\1}\label{2.0.31}
 \end{align}
-Taking L.H.S
+Now using equation \eqref{2.0.6} in \eqref{2.0.31}
 \begin{align}
-=\myvec{6&13\\13&38}\myvec{\frac{1942\sqrt{17}+254646}{64,19,20}\\\frac{-68\sqrt{17}-14}{\sqrt{108800}\sqrt{59}}}\\
-=\myvec{\frac{5826\sqrt{17}+763938}{320960}+\frac{-884\sqrt{17}-182}{\sqrt{108800}\sqrt{59}}\\\frac{12623\sqrt{17}+1655199}{320960}+\frac{-2584\sqrt{17}-5322}{\sqrt{108800}\sqrt{59}}}\\
-=\myvec{1\\1}
+\myvec{6&13\\13&38}\myvec{x_1\\x_2}=\myvec{1\\1}
 \end{align}
+Solving the augmented matrix.
+\begin{align}
+\myvec{6&13&1\\13&38&1} \xleftrightarrow{R_2-{\frac{13}{6}}R_1}\myvec{6&13&1\\0&\frac{59}{6}&-\frac{7}{6}}\\
+\frac{59}{6}x_2=-\frac{7}{6}\\
+6x_1+13x_2=1
+\end{align}
+\begin{align}
+x_1= \frac{25}{59},
+x_2=-\frac{7}{59}\\
+\vec{x}=\myvec{\frac{25}{59}\\-\frac{7}{59}}
+\end{align}
+
  \end{document}
