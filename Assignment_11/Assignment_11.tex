@@ -130,23 +130,24 @@ Prove that the interchange of two rows of a matrix can be accomplished by a fini
   \end{align}
  Let's exchange row $\vec{a}_1$ and $\vec{a}_2$.
  \begin{align}
- \vec{M}=\myvec{$\vec{a}_{2}$\\$\vec{a}_{1}$\\$\cdots$\\$\vec{a}_{n}$}
+\myvec{$\vec{a}_{2}$\\$\vec{a}_{1}$\\$\cdots$\\$\vec{a}_{n}$}\label{a}
  \end{align}
  Now, to prove that same matrix can be obtained by row operations of other two types, we will first add row 1 and row 2.
  \begin{align}
-\myvec{$\vec{a}_1$+$\vec{a}_2$\\$\vec{a}_2$\\$\cdots$\\$\vec{a}_n$}
+\myvec{$\vec{a}_1$+\vec{a}_2\\$\vec{a}_2$\\$\cdots$\\$\vec{a}_n$}
  \end{align}
  Now, subtract row 1 from row 2.
   \begin{align}
-  \vec{M}=\myvec{$\vec{a}_1$+$\vec{a}_2$\\$-\vec{a}_1$\\$\cdots$\\$\vec{a}_n$}
+  \myvec{$\vec{a}_1$+\vec{a}_2\\$-\vec{a}_1$\\$\cdots$\\$\vec{a}_n$}
  \end{align}
  Now adding row 2 to row 1.
  \begin{align}
-  \vec{M}=\myvec{$\vec{a}_2$\\$-\vec{a}_1$\\$\cdots$\\$\vec{a}_n$}
+\myvec{$\vec{a}_2$\\$-\vec{a}_1$\\$\cdots$\\$\vec{a}_n$}
  \end{align}
  Now, multiplying row 2 by -1.
  \begin{align}
- \vec{M}=\myvec{$\vec{a}_2$\\$\vec{a}_1$\\$\cdots$$\\\vec{a}_n$}
+ \myvec{$\vec{a}_{2}$\\$\vec{a}_{1}$\\$\cdots$\\$\vec{a}_{n}$}
  \end{align}
+ Hence, we \eqref{a} was obtained from other two operations.
  
  \end{document}
