@@ -157,37 +157,45 @@ Prove that the interchange of two rows of a matrix can be accomplished by a fini
    \myvec{1&0&0\\0&-1&0\\0&0&1}\myvec{\vec{a}_2\\-\vec{a}_1\\\vec{a}_3}=
   \myvec{\vec{a}_2\\\vec{a}_1\\\vec{a}_3}
   \end{align}
-  Hence \eqref{a} is obtained using $\bf{E}_2$ and $\bf{E}_3$.
+  Hence, we can say that,
+  \begin{align}
+  \begin{multlined}
+     \myvec{1&0&0\\0&-1&0\\0&0&1} \myvec{1&1&0\\0&1&0\\0&0&1}\myvec{1&0&0\\-1&1&0\\0&0&1}\myvec{1&1&0\\0&1&0\\0&0&1}\myvec{\vec{a}_{1}\\\vec{a}_{2}\\\vec{a}_{3}}=\\ \myvec{0&1&0\\1&0&0\\0&0&1}\myvec{\vec{a}_{1}\\\vec{a}_{2}\\\vec{a}_{3}}
+     \end{multilined}
+  \end{align}
   \section{\textbf{Example}}
   Let us assume a matrix $\vec{A}$  
  \begin{align}
- \vec{A}=\myvec{0&1&0\\1&0&0\\0&0&1}
+ \vec{A}=\myvec{1&2&3\\0&1&0\\1&1&0}
   \end{align}
  Let's exchange row $\vec{a}_1$ and $\vec{a}_2$ by applying operation $\bf{E}_1$.
  \begin{align}
- \myvec{0&1&0\\1&0&0\\0&0&1}\myvec{0&1&0\\1&0&0\\0&0&1}=
-\myvec{1&0&0\\0&1&0\\0&0&1}\label{B}
+ \myvec{0&1&0\\1&0&0\\0&0&1}\myvec{1&2&3\\0&1&0\\1&1&0}=
+\myvec{0&1&0\\1&2&3\\1&1&0}\label{B}
  \end{align}
  Now, to prove that same matrix can be obtained by other two elementary operations.We will first perform elementary operation $\bf{E}_2$ by adding row 2 to row 1.
  \begin{align}
-  \myvec{1&1&0\\0&1&0\\0&0&1}\myvec{0&1&0\\1&0&0\\0&0&1}=
-\myvec{1&1&0\\1&0&0\\0&0&1}
- \end{align}
+  \myvec{1&1&0\\0&1&0\\0&0&1}\myvec{1&2&3\\0&1&0\\1&1&0}=\myvec{1&3&3\\0&1&0\\1&1&0}
+\end{align}
  Using elementary operation $\bf{E}_2$ we will subtract row 1 from row 2.
   \begin{align}
-   \myvec{1&0&0\\-1&1&0\\0&0&1}\myvec{1&1&0\\1&0&0\\0&0&1}=
- \myvec{1&1&0\\0&-1&0\\0&0&1}
+   \myvec{1&0&0\\-1&1&0\\0&0&1}\myvec{1&3&3\\0&1&0\\1&1&0}=
+\myvec{1&3&3\\-1&-2&-3\\1&1&0}
  \end{align}
  Using elementary operation $\bf{E}_2$ we will add row 2 to row 1.
-   
- \begin{align}
-  \myvec{1&1&0\\0&1&0\\0&0&1} \myvec{1&1&0\\0&-1&0\\0&0&1}=
- \myvec{1&0&0\\0&-1&0\\0&0&1}
+  \begin{align}
+  \myvec{1&1&0\\0&1&0\\0&0&1} \myvec{1&3&3\\-1&-2&-3\\1&1&0}=
+\myvec{0&1&0\\-1&-2&-3\\1&1&0}
  \end{align}
  Using elementary operation $\bf{E}_3$ we will multiply row 2 by -1.
  \begin{align}
-   \myvec{1&0&0\\0&-1&0\\0&0&1} \myvec{1&0&0\\0&-1&0\\0&0&1}=
-\myvec{1&0&0\\0&1&0\\0&0&1}
+   \myvec{1&0&0\\0&-1&0\\0&0&1} \myvec{0&1&0\\-1&-2&-3\\1&1&0}=
+\myvec{0&1&0\\1&2&3\\1&1&0}
  \end{align}
- Hence, \eqref{B} was obtained from other two operations.
+ Hence,we can say that,
+ \begin{align}
+ \begin{multlined}
+  \myvec{1&0&0\\0&-1&0\\0&0&1} \myvec{1&1&0\\0&1&0\\0&0&1}\myvec{1&0&0\\-1&1&0\\0&0&1}\myvec{1&1&0\\0&1&0\\0&0&1}\myvec{1&2&3\\0&1&0\\1&1&0}=\\ \myvec{0&1&0\\1&0&0\\0&0&1}\myvec{1&2&3\\0&1&0\\1&1&0}
+     \end{multlined}
+ \end{align}
   \end{document}
