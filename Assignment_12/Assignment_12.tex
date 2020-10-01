@@ -131,63 +131,52 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
 \begin{align}
 \vec{R}=\myvec{1&a&b\\0&0&0}\\
 \vec{R}^{'}=\myvec{1&c&d\\0&0&0}\\
-\vec{A}=\vec{R}+\myvec{0&1\\1&0}\vec{R}^{'}\\
-\vec{A}=\myvec{1&a&b\\1&c&d}
-\end{align}
-Let,
-\begin{align}
- \vec{X}=\myvec{x_1\\x_2\\x_3}
+ \vec{A}=\vec{R}+\myvec{0&1\\1&0}\vec{R}^{'}\label{a}\\
+ \vec{A}=\myvec{1&a&b\\1&c&d}
  \end{align}
- If $\vec{X}$ satisfies 
+ Let,
  \begin{align}
- \vec{R}\myvec{x_1\\x_2\\x_3}=0\\
- x_1+x_2a+x_3b=0\label{a}\\
- \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\\
- x_1+x_2c+x_3d=0\label{b}
- \end{align}
- then,
- Now multiplying $\vec{A}$ with $\vec{X}$.
- \begin{align}
-\myvec{1&a&b\\1&c&d}\myvec{x_1\\x_2\\x_3}\\
-  \myvec{x_1+x_2a+x_3b\\
- x_1+x_2c+x_3d}
- \end{align}
- So from equation \eqref{a} and \eqref{b}
- \begin{align}
+  \vec{X}=\myvec{x_1\\x_2\\x_3}
+  \end{align}
+  If $\vec{X}$ satisfies 
+  \begin{align}
+  \vec{R}\myvec{x_1\\x_2\\x_3}=0\label{b}\\
+  \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\label{c}
+  \end{align}
+Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{a}.
+  \begin{align}
+  \vec{A}\myvec{x_1\\x_2\\x_3}\\
+  \left(\vec{R}+\myvec{0&1\\1&0}\vec{R}^{'}\right)\myvec{x_1\\x_2\\x_3}\\
+  \vec{R}\myvec{x_1\\x_2\\x_3}+\myvec{0&1\\1&0}\vec{R}^{'}\myvec{x_1\\x_2\\x_3}
+  \end{align}
+  From \eqref{b} and \eqref{c}
+  \begin{align}
   \vec{A}\myvec{x_1\\x_2\\x_3}=0
- \end{align}
- Thus, $\vec{A}$ in it's reduced form must have one non-zero row which is possible only when the rows of $\vec{A}$ are equal because leading entries in both the vectors equals one.Hence,$\vec{R}$ = $\vec{R}^{'}$. 
-\item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
-Let \begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$.
-\begin{align}
-\vec{A}=\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\\
-\vec{A}=\myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}
-\end{align}
- If $\vec{X}$ satisfies 
+  \end{align}
+  Thus, $\vec{A}$ in it's reduced form must have one non-zero row which is possible only when the rows of $\vec{A}$ are equal because leading entries in both the vectors equals one.Hence,$\vec{R}$ = $\vec{R}^{'}$. 
+ \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
+\begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
  \begin{align}
- \vec{R}\myvec{x_1\\x_2\\x_3}=0\\
-  x_1+x_2a+x_3b=0\label{d}\\
-  x_2+x_3c=0\label{e}\\
- \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\\
-   x_1+x_2d+x_3e=0\label{f}\\
-  x_2+x_3f=0\label{g}\\
+ \vec{A}=\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\label{d}\\
+ \vec{A}=\myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}
  \end{align}
- Now multiplying $\vec{A}$ with $\vec{X}$,
- \begin{align}
- \myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}\myvec{x_1\\x_2\\x_3}\\
- \myvec{ x_1+x_2a+x_3b\\
-  x_2+x_3c\\
-   x_1+x_2d+x_3e\\
-  x_2+x_3f}
- \end{align}
- So from equations \eqref{d},\eqref{e},\eqref{f} and \eqref{g}.
- \begin{align}
- \vec{A}\myvec{x_1\\x_2\\x_3}=0
- \end{align}
- 
-Therefore row reduced echelon form of $\vec{A}$ must have two non-zero rows, which implies the rows of $\vec{R}$ and  $\vec{R}^'$ must be a linear combination of each other. It is possible only when the leading coefficients of the first row of $\vec{R}$ and  $\vec{R}^'$ occur in the same column.By similar argument, the leading coefficients of the second rows must also occur in the same column. Thus, the only way the rows of $\vec{R}$ and $\vec{R}^{'}$ are linear combination of one another is that the respective rows coincide and hence $\vec{R}$ = $\vec{R}^{'}$.
- \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
-$\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied hence, $\vec{R}^{'}$=$\vec{R}$=0.
+   If $\vec{X}$ satisfies 
+  \begin{align}
+  \vec{R}\myvec{x_1\\x_2\\x_3}=0\label{e}\\
+  \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\label{f}
+  \end{align}
+Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
+  \begin{align}
+  \vec{A}\myvec{x_1\\x_2\\x_3}\\
+  \left(\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\right)\myvec{x_1\\x_2\\x_3}\\
+  \myvec{1&0\\0&1\\0&0\\0&0}\vec{R}\myvec{x_1\\x_2\\x_3}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\myvec{x_1\\x_2\\x_3} \end{align}
+  From \eqref{e} and \eqref{f}
+  \begin{align}
+  \vec{A}\myvec{x_1\\x_2\\x_3}=0
+  \end{align}
+ Therefore row reduced echelon form of $\vec{A}$ must have two non-zero rows, which implies the rows of $\vec{R}$ and  $\vec{R}^'$ must be a linear combination of each other. It is possible only when the leading coefficients of the first row of $\vec{R}$ and  $\vec{R}^'$ occur in the same column.By similar argument, the leading coefficients of the second rows must also occur in the same column. Thus, the only way the rows of $\vec{R}$ and $\vec{R}^{'}$ are linear combination of one another is that the respective rows coincide and hence $\vec{R}$ = $\vec{R}^{'}$.
+  \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
+ $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
   \end{document}
