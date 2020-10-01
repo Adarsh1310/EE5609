@@ -136,16 +136,25 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
 \end{align}
 Let,
 \begin{align}
- \vec{X}=\myvec{x_1\\x_2}
+ \vec{X}=\myvec{x_1\\x_2\\x_3}
  \end{align}
  If $\vec{X}$ satisfies 
  \begin{align}
- \vec{R}\myvec{x_1\\x_2}=0\\
- \vec{R}^{'}\myvec{x_1\\x_2}=0
+ \vec{R}\myvec{x_1\\x_2\\x_3}=0\\
+ x_1+x_2a+x_3b=0\label{a}\\
+ \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\\
+ x_1+x_2c+x_3d=0\label{b}
  \end{align}
  then,
+ Now multiplying $\vec{A}$ with $\vec{X}$.
  \begin{align}
- \vec{A}\myvec{x_1\\x_2}=0
+\myvec{1&a&b\\1&c&d}\myvec{x_1\\x_2\\x_3}\\
+  \myvec{x_1+x_2a+x_3b\\
+ x_1+x_2c+x_3d}
+ \end{align}
+ So from equation \eqref{a} and \eqref{b}
+ \begin{align}
+  \vec{A}\myvec{x_1\\x_2\\x_3}=0
  \end{align}
  Thus, $\vec{A}$ in it's reduced form must have one non-zero row which is possible only when the rows of $\vec{A}$ are equal because leading entries in both the vectors equals one.Hence,$\vec{R}$ = $\vec{R}^{'}$. 
 \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
@@ -156,13 +165,26 @@ Let \begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}
 \end{align}
  If $\vec{X}$ satisfies 
  \begin{align}
- \vec{R}\myvec{x_1\\x_2}=0\\
- \vec{R}^{'}\myvec{x_1\\x_2}=0
+ \vec{R}\myvec{x_1\\x_2\\x_3}=0\\
+  x_1+x_2a+x_3b=0\label{d}\\
+  x_2+x_3c=0\label{e}\\
+ \vec{R}^{'}\myvec{x_1\\x_2\\x_3}=0\\
+   x_1+x_2d+x_3e=0\label{f}\\
+  x_2+x_3f=0\label{g}\\
  \end{align}
- then,
+ Now multiplying $\vec{A}$ with $\vec{X}$,
  \begin{align}
- \vec{A}\myvec{x_1\\x_2}=0
+ \myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}\myvec{x_1\\x_2\\x_3}\\
+ \myvec{ x_1+x_2a+x_3b\\
+  x_2+x_3c\\
+   x_1+x_2d+x_3e\\
+  x_2+x_3f}
  \end{align}
+ So from equations \eqref{d},\eqref{e},\eqref{f} and \eqref{g}.
+ \begin{align}
+ \vec{A}\myvec{x_1\\x_2\\x_3}=0
+ \end{align}
+ 
 Therefore row reduced echelon form of $\vec{A}$ must have two non-zero rows, which implies the rows of $\vec{R}$ and  $\vec{R}^'$ must be a linear combination of each other. It is possible only when the leading coefficients of the first row of $\vec{R}$ and  $\vec{R}^'$ occur in the same column.By similar argument, the leading coefficients of the second rows must also occur in the same column. Thus, the only way the rows of $\vec{R}$ and $\vec{R}^{'}$ are linear combination of one another is that the respective rows coincide and hence $\vec{R}$ = $\vec{R}^{'}$.
  \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
 $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied hence, $\vec{R}^{'}$=$\vec{R}$=0.
