@@ -147,15 +147,21 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{a}.
   \end{align}
   From \eqref{b} and \eqref{c}
   \begin{align}
-  \vec{A}\vec{X}=0
+  \vec{A}\vec{X}=0\label{h}
   \end{align}
-  Now,reducing $\vec{A}$,
+  Now, considering the augmented matrix,
   \begin{align}
-  \myvec{1&a&b\\1&c&d}\\
-  \myvec{1&a&b\\0&c-a&d-b}\\
-  \myvec{1&a&b\\0&1&\frac{d-b}{c-a}}
+  \myvec{1&a&b&\vrule& 0\\1&c&d&\vrule& 0}\\
+ &\xleftrightarrow{R_2 = R_2-R_1} \myvec{1&a&b&\vrule& 0\\0&c-a&d-b&\vrule& 0}\label{k}
   \end{align}
-  Thus, $\vec{A}$ in it's reduced form must have one non-zero row which is possible only when the rows of $\vec{A}$ are equal because leading entries in both the vectors equals one.Hence,$\vec{R}$ = $\vec{R}^{'}$. 
+  We know that \eqref{k} will have the same solution as \eqref{b} and \eqref{c}.It will also be consistent hence one of the rows should be zero.
+  \begin{align}
+  c-a=0\\
+  c=a\\
+  d-b=0\\
+  d=b
+  \end{align}
+ Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
 \begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
  \begin{align}
@@ -176,14 +182,24 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \begin{align}
   \vec{A}\vec{X}=0
   \end{align}
-  Now,bringing,reducing $\vec{A}$ 
+  Now, considering the augmented matrix,
   \begin{align}
-  \myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}\\
-  \myvec{1&a&b\\0&1&c\\0&d-a&e-b\\0&0&f-c}
-   \end{align}
- Therefore row reduced echelon form of $\vec{A}$ must have two non-zero rows, which implies the rows of $\vec{R}$ and  $\vec{R}^'$ must be a linear combination of each other. It is possible only when the leading coefficients of the first row of $\vec{R}$ and  $\vec{R}^'$ occur in the same column.By similar argument, the leading coefficients of the second rows must also occur in the same column. Thus, the only way the rows of $\vec{R}$ and $\vec{R}^{'}$ are linear combination of one another is that the respective rows coincide and hence $\vec{R}$ = $\vec{R}^{'}$.
-  \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
- $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied hence, $\vec{R}^{'}$=$\vec{R}$=0.
+  \myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\1&d&e&\vrule& 0\\0&1&f&\vrule& 0}\\
+    &\xleftrightarrow{R_3 = R_3-R_1}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\1&d-a&e-b&\vrule& 0\\0&1&f-c&\vrule& 0}\\
+    &\xleftrightarrow{R_4 = R_4-R_2}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&d-a&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\label{l}
+  \end{align}
+Thus, for \eqref{l} will have the same solution as \eqref{e} and \eqref{f}.It will also be consistent hence two of the rows should be zero.
+  \begin{align}
+  d-a=0\\
+  d=a\\
+  e-b=0\\
+  e=b\\
+  f-c=0\\
+  f=c
+  \end{align}
+ Hence, $\vec{R}$=$\vec{R}^{\prime}$
+\item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
+ $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
   \end{document}
