@@ -195,8 +195,8 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \end{align}
   Now assuming d-a $\not$=0 and reducing \eqref{l} to echelon form,
  \begin{align}
-\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b-cd-ca&\vrule& 0\\0&0&f-c&\vrule& 0}\\
-   &\xleftrightarrow{R_3=\frac{R_3}{e-b-cd-ca}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\\
+&\xleftrightarrow{R_4=R_3-(d-a)R_2}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b-c(d-a)&\vrule& 0\\0&0&f-c&\vrule& 0}\end{align}
+   \begin{align}&\xleftrightarrow{R_3=\frac{R_3}{e-b-c(d-a)}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\\
    &\xleftrightarrow{R_4=R_4-R_3}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}
    \end{align}
  We can see that if d-a $\not$=0 then third row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
