@@ -154,13 +154,18 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{a}.
   \myvec{1&a&b&\vrule& 0\\1&c&d&\vrule& 0}\\
  &\xleftrightarrow{R_2 = R_2-R_1} \myvec{1&a&b&\vrule& 0\\0&c-a&d-b&\vrule& 0}\label{k}
   \end{align}
-For \eqref{k} to be consistent,
-  \begin{align}
-  c-a=0\\
-  c=a\\
-  d-b=0\\
-  d=b
-  \end{align}
+Now, Assuming c-a $\not$=0 and reducing \eqref{k} to row echelon form.
+\begin{align}
+\myvec{1&a&b&\vrule& 0\\0&c-a&d-b&\vrule& 0}\\&\xleftrightarrow{R_2 = \frac{R_2}{R_1}} \myvec{1&a&b&\vrule& 0\\0&1&\frac{d-b}{c-a}&\vrule& 0}
+\end{align}
+We can see that if c-a $\not$=0 then second row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
+So, c-a=0,
+\begin{align}
+c-a=0\\
+c=a\\
+d-b=0\\
+d=b
+\end{align}
  Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
 \begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
@@ -188,7 +193,14 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
     &\xleftrightarrow{R_3 = R_3-R_1}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\1&d-a&e-b&\vrule& 0\\0&1&f-c&\vrule& 0}\\
     &\xleftrightarrow{R_4 = R_4-R_2}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&d-a&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\label{l}
   \end{align}
-For \eqref{l} to be consistent,
+  Now assuming d-a $\not$=0 and reducing \eqref{l} to echelon form,
+ \begin{align}
+\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b-cd-ca&\vrule& 0\\0&0&f-c&\vrule& 0}\\
+   &\xleftrightarrow{R_3=\frac{R_3}{e-b-cd-ca}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\\
+   &\xleftrightarrow{R_4=R_4-R_3}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}
+   \end{align}
+ We can see that if d-a $\not$=0 then third row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
+So,
   \begin{align}
   d-a=0\\
   d=a\\
