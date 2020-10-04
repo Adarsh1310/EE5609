@@ -180,16 +180,17 @@ d=b
   \end{align}
   Here,
   \begin{align}
-  \vec{R}=\myvec{\vec{I}& \vec{a}}\label{f}\\
-  \vec{a}=\myvec{b\\c}
+  \vec{R}=\myvec{\vec{I}&\vec{a}}\label{f}\\
+  \vec{a}=\myvec{b \\c}
   \end{align}
   Let,
   \begin{align}
   \vec{X}=\myvec{\vec{y}^T&z}\label{g}
   \end{align}
-  where z is a scalar constant.Now,substituting \eqref{g} and \eqref{f} in \eqref{fi}
+  where z is a scalar constant. Now,substituting \eqref{g} and \eqref{f} in \eqref{fi}
   \begin{align}
-  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}}=0
+  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}}=0\\
+  \myvec{\vec{y}^T\vec{I}&\vec{y}^T\vec{a}\\z\vec{I}&z\vec{a}}=0
   \end{align}
   Now for,
   \begin{align}
@@ -198,7 +199,7 @@ d=b
   \end{align}
   Here,
   \begin{align}
-  \vec{R}^{'}=\myvec{\vec{I}& \vec{a}^{'}}\label{ff}\\
+  \vec{R}^{'}=\myvec{\vec{I}&\vec{a}^{'}}\label{ff}\\
   \vec{a}^{'}=\myvec{e\\f}
   \end{align}
   Let,
@@ -207,7 +208,8 @@ d=b
   \end{align}
   where z is a scalar constant.Now,substituting \eqref{gg} and \eqref{ff} in \eqref{fii}
   \begin{align}
-  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}^{'}}=0
+  \myvec{\vec{y}^T\\z}\myvec{\vec{I}&\vec{a}^{'}}=0\\
+    \myvec{\vec{y}^T\vec{I}&\vec{y}^T\vec{a}^{'}\\z\vec{I}&z\vec{a}^{'}}=0
   \end{align}
 Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \begin{align}
@@ -218,7 +220,7 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \begin{align}
   \vec{A}\vec{X}=0
   \end{align}
-  Now, considering the augmented matrix,
+ Now, considering the augmented matrix,
   \begin{align}
   \myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\1&0&e&\vrule& 0\\0&1&f&\vrule& 0}\end{align}
   \begin{align}
