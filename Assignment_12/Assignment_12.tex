@@ -168,10 +168,10 @@ d=b
 \end{align}
  Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
-\begin{align}\vec{R}=\myvec{1&a&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&d&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
+\begin{align}\vec{R}=\myvec{1&0&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&0&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
  \begin{align}
  \vec{A}=\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\label{d}\\
- \vec{A}=\myvec{1&a&b\\0&1&c\\1&d&e\\0&1&f}
+ \vec{A}=\myvec{1&0&b\\0&1&c\\1&0&e\\0&1&f}
  \end{align}
  Let $\vec{X}$ satisfy
   \begin{align}
@@ -189,24 +189,26 @@ Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \end{align}
   Now, considering the augmented matrix,
   \begin{align}
-  \myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\1&d&e&\vrule& 0\\0&1&f&\vrule& 0}\\
-    &\xleftrightarrow{R_3 = R_3-R_1}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\1&d-a&e-b&\vrule& 0\\0&1&f-c&\vrule& 0}\\
-    &\xleftrightarrow{R_4 = R_4-R_2}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&d-a&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\label{l}
+  \myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\1&0&e&\vrule& 0\\0&1&f&\vrule& 0}\end{align}
+  \begin{align}
+    &\xleftrightarrow{R_3 = R_3-R_1}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\1&0&e-b&\vrule& 0\\0&1&f-c&\vrule& 0}\end{align}\begin{align}
+    &\xleftrightarrow{R_4 = R_4-R_2}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\label{l}
   \end{align}
-  Now assuming d-a $\not$=0 and reducing \eqref{l} to echelon form,
  \begin{align}
-&\xleftrightarrow{R_3=R_3-(d-a)R_2}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b-c(d-a)&\vrule& 0\\0&0&f-c&\vrule& 0}\end{align}
-   \begin{align}&\xleftrightarrow{R_3=\frac{R_3}{e-b-c(d-a)}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
+&\xleftrightarrow{R_3=\frac{R_3}{e-b}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\end{align}
+   \begin{align}&\xleftrightarrow{R_3=\frac{R_3}{f-c}}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
    \begin{align}
-   \xleftrightarrow{R_4=\frac{R_4}{f-c}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
+   \xleftrightarrow{R_4=\frac{R_4}{f-c}}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
    \begin{align}
-   &\xleftrightarrow{R_4=R_4-R_3}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}
+   &\xleftrightarrow{R_4=R_4-R_3}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}\\
+    &\xleftrightarrow{R_1=R_1-bR_3}\myvec{1&0&0&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}\\
+     &\xleftrightarrow{R_2=R_2-cR_3}\myvec{1&0&0&\vrule& 0\\0&1&0&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}
    \end{align}
- We can see that if d-a $\not$=0 then third row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
+ We can see that if e-b $\not$=0 then third row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
 So,
   \begin{align}
-  d-a=0\\
-  d=a\\
+  d=0\\
+  a=0\\
   e-b=0\\
   e=b\\
   f-c=0\\
