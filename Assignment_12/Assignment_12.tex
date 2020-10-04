@@ -176,13 +176,44 @@ d=b
  Let $\vec{X}$ satisfy
   \begin{align}
   \vec{R}\vec{X}=0\label{e}\\
-  \vec{R}^{'}\vec{X}=0\label{f}
+  \vec{X}^{T}\vec{R}=0\label{fi}
+  \end{align}
+  Here,
+  \begin{align}
+  \vec{R}=\myvec{\vec{I}& \vec{a}}\label{f}\\
+  \vec{a}=\myvec{b\\c}
+  \end{align}
+  Let,
+  \begin{align}
+  \vec{X}=\myvec{\vec{y}^T&z}\label{g}
+  \end{align}
+  where z is a scalar constant.Now,substituting \eqref{g} and \eqref{f} in \eqref{fi}
+  \begin{align}
+  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}}=0
+  \end{align}
+  Now for,
+  \begin{align}
+  \vec{R}^{'}\vec{X}=0\label{ee}\\
+  \vec{X}^{T}\vec{R}^{'}=0\label{fii}
+  \end{align}
+  Here,
+  \begin{align}
+  \vec{R}^{'}=\myvec{\vec{I}& \vec{a}^{'}}\label{ff}\\
+  \vec{a}^{'}=\myvec{e\\f}
+  \end{align}
+  Let,
+  \begin{align}
+  \vec{X}=\myvec{\vec{y}^T&z}\label{gg}
+  \end{align}
+  where z is a scalar constant.Now,substituting \eqref{gg} and \eqref{ff} in \eqref{fii}
+  \begin{align}
+  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}^{'}}=0
   \end{align}
 Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \begin{align}
-  \vec{A}\vec{X}\\
-  \left(\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\right)\vec{X}\\
-  \myvec{1&0\\0&1\\0&0\\0&0}\vec{R}\vec{X}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\vec{X} \end{align}
+  =\vec{A}\vec{X}\\
+  =\left(\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\right)\vec{X}\\
+  =\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}\vec{X}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\vec{X} \end{align}
   From \eqref{e} and \eqref{f}
   \begin{align}
   \vec{A}\vec{X}=0
@@ -219,4 +250,5 @@ So,
  $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
+
   \end{document}
