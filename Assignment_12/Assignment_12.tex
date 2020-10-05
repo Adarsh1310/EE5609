@@ -176,21 +176,22 @@ d=b
  Let $\vec{X}$ satisfy
   \begin{align}
   \vec{R}\vec{X}=0\label{e}\\
-  \vec{X}^{T}\vec{R}=0\label{fi}
+  \vec{X}^{T}\vec{R}^{T}=0\label{fi}
   \end{align}
   Here,
   \begin{align}
   \vec{R}=\myvec{\vec{I}&\vec{a}}\label{f}\\
-  \vec{a}=\myvec{b \\c}
+  \vec{a}=\myvec{b \\c}\\
+  \vec{R}^{T}=\myvec{\vec{I}\\\vec{a}^T}
   \end{align}
   Let,
   \begin{align}
-  \vec{X}=\myvec{\vec{y}^T&z}\label{g}
+  \vec{X}=\myvec{\vec{y}^T\\z}\label{g}
   \end{align}
   where z is a scalar constant. Now,substituting \eqref{g} and \eqref{f} in \eqref{fi}
   \begin{align}
-  \myvec{\vec{y}^T\\z}\myvec{\vec{I}& \vec{a}}=0\\
-  \myvec{\vec{y}^T\vec{I}&\vec{y}^T\vec{a}\\z\vec{I}&z\vec{a}}=0
+  \myvec{\vec{y}^T&z}\myvec{\vec{I}\\\vec{a}^T}=0\\
+  \vec{y}^T+z\vect{a}^T=0\label{49}
   \end{align}
   Now for,
   \begin{align}
@@ -199,55 +200,40 @@ d=b
   \end{align}
   Here,
   \begin{align}
-  \vec{R}^{'}=\myvec{\vec{I}&\vec{a}^{'}}\label{ff}\\
-  \vec{a}^{'}=\myvec{e\\f}
+  \vec{R}^{'}=\myvec{\vec{I}&\vec{b}}\label{ff}\\
+  \vec{b}=\myvec{e\\f}
   \end{align}
   Let,
   \begin{align}
-  \vec{X}=\myvec{\vec{y}^T&z}\label{gg}
+  \vec{X}=\myvec{\vec{y}^T\\z}\label{gg}
   \end{align}
   where z is a scalar constant.Now,substituting \eqref{gg} and \eqref{ff} in \eqref{fii}
   \begin{align}
-  \myvec{\vec{y}^T\\z}\myvec{\vec{I}&\vec{a}^{'}}=0\\
-    \myvec{\vec{y}^T\vec{I}&\vec{y}^T\vec{a}^{'}\\z\vec{I}&z\vec{a}^{'}}=0
+    \myvec{\vec{y}^T&z}\myvec{\vec{I}\\\vec{b}^T}=0\\
+  \vec{y}^T+z\vect{b}^T=0\label{50}
   \end{align}
 Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{d}.
   \begin{align}
   =\vec{A}\vec{X}\\
   =\left(\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\right)\vec{X}\\
-  =\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}\vec{X}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\vec{X} \end{align}
-  From \eqref{e} and \eqref{f}
-  \begin{align}
-  \vec{A}\vec{X}=0
+  =\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}\vec{X}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\vec{X} \\
+  =\myvec{\vec{I}&\vec{a}\\\vec{I} &\vec{b}}\vec{X}
   \end{align}
- Now, considering the augmented matrix,
+  Now using, $\vec{X}^T$$\vec{A}^T$
   \begin{align}
-  \myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\1&0&e&\vrule& 0\\0&1&f&\vrule& 0}\end{align}
-  \begin{align}
-    &\xleftrightarrow{R_3 = R_3-R_1}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\1&0&e-b&\vrule& 0\\0&1&f-c&\vrule& 0}\end{align}\begin{align}
-    &\xleftrightarrow{R_4 = R_4-R_2}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\label{l}
+  =\myvec{\vec{y}^T&z}\myvec{\vec{I}&\vec{I} \\\vec{a}^T&\vec{b}^T}\\
+  =\myvec{\vec{y}^T+z\vec{a}^T&\vec{y}+\vec{b}^T}\label{ax}
   \end{align}
- \begin{align}
-&\xleftrightarrow{R_3=\frac{R_3}{e-b}}\myvec{1&a&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&e-b&\vrule& 0\\0&0&f-c&\vrule& 0}\end{align}
-   \begin{align}&\xleftrightarrow{R_3=\frac{R_3}{f-c}}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
-   \begin{align}
-   \xleftrightarrow{R_4=\frac{R_4}{f-c}}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&1&\vrule& 0}\end{align}
-   \begin{align}
-   &\xleftrightarrow{R_4=R_4-R_3}\myvec{1&0&b&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}\\
-    &\xleftrightarrow{R_1=R_1-bR_3}\myvec{1&0&0&\vrule& 0\\0&1&c&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}\\
-     &\xleftrightarrow{R_2=R_2-cR_3}\myvec{1&0&0&\vrule& 0\\0&1&0&\vrule& 0\\0&0&1&\vrule& 0\\0&0&0&\vrule& 0}
-   \end{align}
- We can see that if e-b $\not$=0 then third row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
-So,
+  Since \eqref{ax} is coming out to be a zero vector. We can say that $\vec{R}$ and $\vec{R}^{'}$ are linear combination of each other.
+  Also from \eqref{49} and \eqref{50}
   \begin{align}
-  d=0\\
-  a=0\\
-  e-b=0\\
-  e=b\\
-  f-c=0\\
-  f=c
+    \vec{y}^T+z\vect{a}^T=\vec{y}^T+z\vect{b}^T\\
+    \vect{a}^T=\vect{b}^T\\
+    b=e\\
+    c=f
   \end{align}
- Hence, $\vec{R}$=$\vec{R}^{\prime}$
+  
+  Hence, $\vec{R}$=$\vec{R}^{\prime}$
 \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
  $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
