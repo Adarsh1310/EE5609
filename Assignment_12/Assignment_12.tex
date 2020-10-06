@@ -154,9 +154,17 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
   Subtracting \eqref{abcde} from \eqref{abcdef},
   \begin{align}
   x+\vec{a}^T\vec{y}-x-\vec{b}^T\vec{y}=0\\
-  (\vec{a}^T-\vec{b}^T)y=0\label{part1}
+  (\vec{a}^T-\vec{b}^T)\vec{y}=0\label{part1}
   \end{align}
-  Hence for \eqref{part1} to be always valid
+  Since $\vec{y}$ is a $2 \times 1 $ vector,
+  \begin{align}
+ \implies y_1 \vec{a}-y_2\vec{b} = 0
+ \end{align}
+ Which can be written as,
+ \begin{align}
+ \vec{a}=k\vec{b}
+\end{align}
+where,k=$\frac{\vec{y}_2}{\vec{y}_1}$ assuming \vec{y}_1 $\not$=0.\\\\\\\\\\\\\\\\\\\\Hence for \eqref{part1} to be always valid
   \begin{align}
   \vec{a}^T-\vec{b}^T=0\\
    \vec{a}^T= \vec{b}^T
@@ -218,4 +226,11 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
  $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
+Since $$\vec{y}$$ is a $$2 \times 1 $$ vector,
+
+$$(a^T-b^T)\vec{y} = 0 \implies $$y_1 \vec{a}-y_2\vec{b} = 0, or, \vec{a} = k \vec{b}, k = \frac{y_2}{y_1}$$ assuming
+
+that $$y_1 \ne 0$$. Then proceed with your argument.
+
+Also, consider the case when $$y_1 = 0$$.
   \end{document}
