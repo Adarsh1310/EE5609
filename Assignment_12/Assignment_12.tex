@@ -136,7 +136,7 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
   \begin{align}
   \vec{R}\vec{X}=0\label{b}\\
   \myvec{1 & \vec{a}^T}\myvec{x \\ \vec{y}} = 0\\
-  x+\vec{b}^T\vec{y}=0\label{abcdef}
+  x+\vec{a}^T\vec{y}=0\label{abcdef}
   \end{align}
   where 
   \begin{align}
@@ -151,13 +151,16 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
   \begin{align}
   \vec{b}=\myvec{c \\ d}
   \end{align}
-  Now from \eqref{abcde} and \eqref{abcdef}
+  Subtracting \eqref{abcde} from \eqref{abcdef},
   \begin{align}
-  x+\vec{a}^T\vec{y}=0=x+\vec{b}^T\vec{y}=0\\
-  \vec{a}^T=\vec{b}^T\\
-  a=c\\
-  b=d
+  x+\vec{a}^T\vec{y}-x-\vec{b}^T\vec{y}=0\\
+  (\vec{a}^T-\vec{b}^T)y=0\label{part1}
   \end{align}
+  Hence for \eqref{part1} to be always valid
+  \begin{align}
+  \vec{a}^T-\vec{b}^T=0\\
+   \vec{a}^T= \vec{b}^T
+   \end{align}
  Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
 \begin{align}\vec{R}=\myvec{1&0&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&0&e\\0&1&f}\end{align}
@@ -200,14 +203,16 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
     \myvec{\vec{y}^T&z}\myvec{\vec{I}\\\vec{b}^T}=0\\
   \vec{y}^T+z\vec{b}^T=0\label{50}
   \end{align}
-  Now, from \eqref{49} and \eqref{50}
+  Subtracting \eqref{50} from \eqref{49} 
   \begin{align}
-    \vec{y}^T+z\vec{a}^T=\vec{y}^T+z\vec{b}^T\\
-    \vec{a}^T=\vec{b}^T\\
-    b=e\\
-    c=f
+    \vec{y}^T+z\vec{a}^T-\vec{y}^T-z\vec{b}^T=0\\
+    (\vec{a}^T-\vec{b}^T)y=0\label{part2}
   \end{align}
-  
+  Hence \eqref{part2} to be always valid
+  \begin{align}
+  \vec{a}^T-\vec{b}^T=0\\
+  \vec{a}^T=\vec{b}^T
+  \end{align}
   Hence, $\vec{R}$=$\vec{R}^{\prime}$
 \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
  $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
