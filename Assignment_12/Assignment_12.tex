@@ -131,48 +131,36 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
 \begin{align}
 \vec{R}=\myvec{1&a&b\\0&0&0}\\
 \vec{R}^{'}=\myvec{1&c&d\\0&0&0}\\
- \vec{A}=\vec{R}+\myvec{0&1\\1&0}\vec{R}^{'}\label{a}\\
- \vec{A}=\myvec{1&a&b\\1&c&d}
- \end{align}
+  \end{align}
   Let $\vec{X}$ satisfy
   \begin{align}
   \vec{R}\vec{X}=0\label{b}\\
-  \vec{R}^{'}\vec{X}=0\label{c}
+  \myvec{1 & \vec{a}^T}\myvec{x \\ \vec{y}} = 0\\
+  x+\vec{b}^T\vec{y}=0\label{abcdef}
   \end{align}
-Now multiplying $\vec{A}$ and $\vec{X}$ and substituting \eqref{a}.
+  where 
   \begin{align}
-  =\vec{A}\vec{X}\\
-  =\left(\vec{R}+\myvec{0&1\\1&0}\vec{R}^{'}\right)\vec{X}\\
-  =\vec{R}\vec{X}+\myvec{0&1\\1&0}\vec{R}^{'}\vec{X}
+  \vec{a}=\myvec{a \\ b}
   \end{align}
-  From \eqref{b} and \eqref{c}
   \begin{align}
-  \vec{A}\vec{X}=0\label{h}
+  \vec{R}^{'}\vec{X}=0\label{c}\\
+   \myvec{1 & \vec{b}^T}\myvec{x \\ \vec{y}} = 0\\
+   x+\vec{b}^T\vec{y}=0\label{abcde}
   \end{align}
-  Now, considering the augmented matrix,
+  where 
   \begin{align}
-  \myvec{1&a&b&\vrule& 0\\1&c&d&\vrule& 0}\\
- &\xleftrightarrow{R_2 = R_2-R_1} \myvec{1&a&b&\vrule& 0\\0&c-a&d-b&\vrule& 0}\label{k}
+  \vec{b}=\myvec{c \\ d}
   \end{align}
-Now, Assuming c-a $\not$=0 and reducing \eqref{k} to row echelon form.
-\begin{align}
-\myvec{1&a&b&\vrule& 0\\0&c-a&d-b&\vrule& 0}\\&\xleftrightarrow{R_2 = \frac{R_2}{R_1}} \myvec{1&a&b&\vrule& 0\\0&1&\frac{d-b}{c-a}&\vrule& 0}
-\end{align}
-We can see that if c-a $\not$=0 then second row wouldn't come out to be zero which isn't possible because rows will be linear combination of each other as $\vec{R}$ and $\vec{R}^{'}$ have the same solution.
-So, c-a=0,
-\begin{align}
-c-a=0\\
-c=a\\
-d-b=0\\
-d=b
-\end{align}
+  Now from \eqref{abcde} and \eqref{abcdef}
+  \begin{align}
+  x+\vec{a}^T\vec{y}=0=x+\vec{b}^T\vec{y}=0\\
+  \vec{a}^T=\vec{b}^T\\
+  a=c\\
+  b=d
+  \end{align}
  Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
-\begin{align}\vec{R}=\myvec{1&0&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&0&e\\0&1&f}\end{align}Now let's consider another matrix $\vec{A}$ whose first two rows are from $\vec{R}$ and last two rows are from $\vec{R}^'$
- \begin{align}
- \vec{A}=\myvec{1&0\\0&1\\0&0\\0&0}\vec{R}+\myvec{0&0\\0&0\\1&0\\0&1}\vec{R}^{'}\label{d}\\
- \vec{A}=\myvec{1&0&b\\0&1&c\\1&0&e\\0&1&f}
- \end{align}
+\begin{align}\vec{R}=\myvec{1&0&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&0&e\\0&1&f}\end{align}
  Let $\vec{X}$ satisfy
   \begin{align}
   \vec{R}\vec{X}=0\label{e}\\
@@ -186,12 +174,12 @@ d=b
   \end{align}
   Let,
   \begin{align}
-  \vec{X}=\myvec{\vec{y}^T\\z}\label{g}
+  \vec{X}^T=\myvec{\vec{y}^T&z}\label{g}
   \end{align}
   where z is a scalar constant. Now,substituting \eqref{g} and \eqref{f} in \eqref{fi}
   \begin{align}
   \myvec{\vec{y}^T&z}\myvec{\vec{I}\\\vec{a}^T}=0\\
-  \vec{y}^T+z\vect{a}^T=0\label{49}
+  \vec{y}^T+z\vec{a}^T=0\label{49}
   \end{align}
   Now for,
   \begin{align}
@@ -205,17 +193,17 @@ d=b
   \end{align}
   Let,
   \begin{align}
-  \vec{X}=\myvec{\vec{y}^T\\z}\label{gg}
+  \vec{X}^T=\myvec{\vec{y}^T&z}\label{gg}
   \end{align}
   where z is a scalar constant.Now,substituting \eqref{gg} and \eqref{ff} in \eqref{fii}
   \begin{align}
     \myvec{\vec{y}^T&z}\myvec{\vec{I}\\\vec{b}^T}=0\\
-  \vec{y}^T+z\vect{b}^T=0\label{50}
+  \vec{y}^T+z\vec{b}^T=0\label{50}
   \end{align}
   Now, from \eqref{49} and \eqref{50}
   \begin{align}
-    \vec{y}^T+z\vect{a}^T=\vec{y}^T+z\vect{b}^T\\
-    \vect{a}^T=\vect{b}^T\\
+    \vec{y}^T+z\vec{a}^T=\vec{y}^T+z\vec{b}^T\\
+    \vec{a}^T=\vec{b}^T\\
     b=e\\
     c=f
   \end{align}
@@ -225,5 +213,4 @@ d=b
  $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
-
   \end{document}
