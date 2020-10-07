@@ -162,13 +162,23 @@ $\vec{R}$$\vec{X}$=0, \vec{R}^{'}$$\vec{X}$=0 will also have two free variables.
  \end{align}
  Which can be written as,
  \begin{align}
- \vec{a}=k\vec{b}
+ \vec{a}=k\vec{b}\label{ak}
 \end{align}
-where,k=$\frac{\vec{y}_2}{\vec{y}_1}$ assuming \vec{y}_1 $\not$=0.\\\\\\\\\\\\\\\\\\\\Hence for \eqref{part1} to be always valid
-  \begin{align}
-  \vec{a}^T-\vec{b}^T=0\\
-   \vec{a}^T= \vec{b}^T
-   \end{align}
+where,k=$\frac{\vec{y}_2}{\vec{y}_1}$ assuming \vec{y}_1 $\not$=0.Now,Substituting \eqref{ak} in \eqref{abcdef}
+\begin{align}
+x+k\vec{b}^T\vec{y}=0\label{kb}
+\end{align}
+Comparing \eqref{kb} with \eqref{abcde}
+\begin{align}
+x+\vec{b}^T\vec{y}=0\\
+x+k\vec{b}^T\vec{y}=0
+\end{align}
+Hence k=1 which means $y_1$=$y_2$ and from this we can say that $\vec{a}$=$\vec{b}$.If in the above case we take $y_1$=0 then
+\begin{align}
+y_1\vec{a}-y_2\vec{b}=0\\
+y_2\vec{b}=0\label{eqnb}
+\end{align}
+Hence for the \eqref{eqnb} to be always true $\vec{b}$ should be zero.Now from \eqref{ak} we will see that  $\vec{a}$ will also be 0.
  Hence, $\vec{R}$=$\vec{R}^{\prime}$
  \item Let $\vec{R}$ and $\vec{R}^{'}$ have all rows as non zero.
 \begin{align}\vec{R}=\myvec{1&0&b\\0&1&c} \\\vec{R}^{'}=\myvec{1&0&e\\0&1&f}\end{align}
@@ -214,23 +224,11 @@ where,k=$\frac{\vec{y}_2}{\vec{y}_1}$ assuming \vec{y}_1 $\not$=0.\\\\\\\\\\\\\\
   Subtracting \eqref{50} from \eqref{49} 
   \begin{align}
     \vec{y}^T+z\vec{a}^T-\vec{y}^T-z\vec{b}^T=0\\
-    (\vec{a}^T-\vec{b}^T)y=0\label{part2}
+    (\vec{a}^T-\vec{b}^T)z=0\label{part2}\\
+    \vec{a}^T=\vec{b}^T
   \end{align}
-  Hence \eqref{part2} to be always valid
-  \begin{align}
-  \vec{a}^T-\vec{b}^T=0\\
-  \vec{a}^T=\vec{b}^T
-  \end{align}
-  Hence, $\vec{R}$=$\vec{R}^{\prime}$
-\item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
- $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied Hence, $\vec{R}^{'}$=$\vec{R}$=0.
+  \item Suppose matrix $\vec{R}$ have all the rows as zero then $\vec{R}$$\vec{X}$=0 will be satisfied for all values of $\vec{X}$. We know that $\vec{R}^'$$\vec{X}$=0 will have the exact same solution as 
+ $\vec{R}$$\vec{X}$=0 then we can say that for all values of $\vec{X}$=0 equation $\vec{R}^{'}$$\vec{X}$=0 will be satisfied.Hence, $\vec{R}^{'}$=$\vec{R}$=0.
 
 \end{enumerate}
-Since $$\vec{y}$$ is a $$2 \times 1 $$ vector,
-
-$$(a^T-b^T)\vec{y} = 0 \implies $$y_1 \vec{a}-y_2\vec{b} = 0, or, \vec{a} = k \vec{b}, k = \frac{y_2}{y_1}$$ assuming
-
-that $$y_1 \ne 0$$. Then proceed with your argument.
-
-Also, consider the case when $$y_1 = 0$$.
-  \end{document}
+\end{document}
