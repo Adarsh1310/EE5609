@@ -135,11 +135,20 @@ Suppose $\vec{A}$ is a 2$\times$1  matrix and $\vec{B}$ is 1$\times$2 matrix.Pro
  =\myvec{a\\b}\myvec{c&d}\\
  =\myvec{ac&ad\\bc&bd}\label{eqn1}
  \end{align}
- Reducing equation \eqref{eqn1}
+ Let,
  \begin{align}
- \myvec{ac&ad\\bc&bd}\\
- &\xleftrightarrow{R_2=R_2-\frac{b}{a}R_1}\myvec{ac&ad\\0&0}
+ \vec{U}=\myvec{ac\\bc}\\
+ \vec{V}=\myvec{ad\\bd}
  \end{align}
- Since one of the row of $\vec{C}$ is zero i.e. the rows are linearly dependent, we can say that the matrix is non invertible
+ For \eqref{eqn1} to be non invertible
+ \begin{align}
+ \vec{C}\vec{x}=0\label{cx}
+ \end{align}
+ Should have a non zero solution.
+ \begin{align}
+ \myvec{\vec{U}&\vec{V}}\myvec{x_1\\x_2}=0\\
+ x_1\vec{U}=-x_2\vec{V}
+ \end{align}
+ This shows that the two columns are a scalar multiple of each other and hence they will have a non trivial solution.So,we can say that $\vec{C}$ is non invertible.
 
 \end{document}
