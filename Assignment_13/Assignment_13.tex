@@ -124,31 +124,32 @@
   \section{\textbf{Problem}}
 Suppose $\vec{A}$ is a 2$\times$1  matrix and $\vec{B}$ is 1$\times$2 matrix.Prove that $\vec{C}$=$\vec{A}$$\vec{B}$ is non invertible.
  \section{\textbf{Solution}}
- Let's assume,
+ Let's take,
  \begin{align}
  \vec{A}=\myvec{a\\b}\\
  \vec{B}=\myvec{c&d}
  \end{align}
- Now,
+assuming $\vec{A}$ and $\vec{B}$ to be non zero vectors.
+ Let $\vec{x}^{'}$ be the nullspace of $\vec{B}$,
  \begin{align}
- \vec{C}=\vec{A}\vec{B}\\
- =\myvec{a\\b}\myvec{c&d}\\
- =\myvec{ac&ad\\bc&bd}\label{eqn1}
+ \vec{B}\vec{x}^{'}=0\label{x'}\\
+ \myvec{c&d}\vec{x}^{'}=0
  \end{align}
- Let,
+ From above we can see that,
  \begin{align}
- \vec{U}=\myvec{ac\\bc}\\
- \vec{V}=\myvec{ad\\bd}
+ \vec{x}=k\myvec{-d\\c} 
  \end{align}
- For \eqref{eqn1} to be non invertible
- \begin{align}
- \vec{C}\vec{x}=0\label{cx}
- \end{align}
- Should have a non zero solution.
- \begin{align}
- \myvec{\vec{U}&\vec{V}}\myvec{x_1\\x_2}=0\\
- x_1\vec{U}=-x_2\vec{V}
- \end{align}
- This shows that the two columns are a scalar multiple of each other and hence \eqref{cx} will have a non trivial solution.So,we can say that $\vec{C}$ is non invertible.
-
+ where k is a scalar constant.
+ Now,we know that for $\vec{C}$ to be non invertible $\vec{C}\vec{x}=0$ should have a non trivial solution.So,
+  \begin{align}
+ \vec{C}\vec{x}=0\\
+\implies \vec{A}\vec{B}\vec{x}=0\label{x}
+\end{align}
+We know that the nullspace of $\vec{B}$ will be a subset of the nullspace of $\vec{AB}$. Substituting \eqref{x'}
+\begin{align}
+\vec{A}\vec{B}\vec{x}=0\\
+\implies \vec{A} \vec{B}\vec{x}^{'}=0\\
+ k\vec{A}\vec{B}\myvec{-d\\c}=0
+\end{align}
+From \eqref{x'} we can see that \eqref{x} has a non trivial solution and hence is invertible.
 \end{document}
