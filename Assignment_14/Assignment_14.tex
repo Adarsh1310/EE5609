@@ -1,0 +1,186 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+ \usepackage{setspace}
+ \usepackage{gensymb}
+ \usepackage{graphicx}
+ \singlespacing
+\graphicspath{ {/user/adarshsrivastava/desktop/Matrix Theory/Assignemnt_7} }
+ \usepackage[cmex10]{amsmath}
+ \usepackage{amsthm}
+ \usepackage{hyperref}
+ \usepackage{mathrsfs}
+ \usepackage{txfonts}
+ \usepackage{stfloats}
+ \usepackage{bm}
+ \usepackage{cite}
+ \usepackage{cases}
+ \usepackage{subfig}
+ \usepackage{longtable}
+ \usepackage{multirow}
+ \usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{steinmetz}
+ \usepackage{tikz}
+ \usepackage{circuitikz}
+ \usepackage{verbatim}
+ \usepackage{tfrupee}
+ \usepackage[breaklinks=true]{hyperref}
+ \usepackage{tkz-euclide}
+ \usetikzlibrary{calc,math}
+ \usepackage{listings}
+     \usepackage{color}                                            %%
+     \usepackage{array}                                            %%
+     \usepackage{longtable}                                        %%
+     \usepackage{calc}                                             %%
+     \usepackage{multirow}                                         %%
+     \usepackage{hhline}                                           %%
+     \usepackage{ifthen}                                           %%
+     \usepackage{lscape}     
+ \usepackage{multicol}
+ \usepackage{chngcntr}
+ \DeclareMathOperator*{\Res}{Res}
+ \renewcommand\thesection{\arabic{section}}
+ \renewcommand\thesubsection{\thesection.\arabic{subsection}}
+ \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+ \renewcommand\thesectiondis{\arabic{section}}
+ \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+ \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+ \hyphenation{op-tical net-works semi-conduc-tor}
+ \def\inputGnumericTable{}                                 %%
+ \lstset{
+ %language=C,
+ frame=single, 
+ breaklines=true,
+ columns=fullflexible
+ }
+ \begin{document}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{problem}{Problem}
+ \newtheorem{proposition}{Proposition}[section]
+ \newtheorem{lemma}{Lemma}[section]
+ \newtheorem{corollary}[theorem]{Corollary}
+ \newtheorem{example}{Example}[section]
+ \newtheorem{definition}[problem]{Definition}
+ \newcommand{\BEQA}{\begin{eqnarray}}
+ \newcommand{\EEQA}{\end{eqnarray}}
+ \newcommand{\define}{\stackrel{\triangle}{=}}
+ \bibliographystyle{IEEEtran}
+ \providecommand{\mbf}{\mathbf}
+ \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+ \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+ \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+ \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+ \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+ \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+ \providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+ \providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+ \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+ \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+ \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+ \theoremstyle{remark}
+ \newtheorem{rem}{Remark}
+ \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+ \providecommand{\abs}[1]{\left\vert#1\right\vert}
+ \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+ \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+ %\providecommand{\norm}[1]{\lVert#1\rVert}
+ \providecommand{\mtx}[1]{\mathbf{#1}}
+ \providecommand{\mean}[1]{E\left[ #1 \right]}
+ \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+ %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+ \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+ 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+ \newcommand{\solution}{\noindent \textbf{Solution: }}
+ \newcommand{\cosec}{\,\text{cosec}\,}
+ \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+ \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+ \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+ \numberwithin{equation}{subsection}
+ \makeatletter
+ \@addtoreset{figure}{problem}
+ \makeatother
+ \let\StandardTheFigure\thefigure
+ \let\vec\mathbf
+ \renewcommand{\thefigure}{\theproblem}
+ \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+      \def\rightbox#1{\makebox[0in][r]{#1}}
+      \def\centbox#1{\makebox[0in]{#1}}
+      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+ \vspace{3cm}
+ \title{Assignment 14}
+ \author{Adarsh Srivastava}
+ \maketitle
+ \newpage
+ \bigskip
+ %\renewcommand{\thefigure}{\theenumi}
+ \renewcommand{\thetable}{\theenumi}
+ The link to the solution is
+ \begin{lstlisting}
+  https://github.com/Adarsh1310/EE5609
+ \end{lstlisting}
+ \begin{abstract}
+ This documents solves a problem based on vector spaces.
+ \end{abstract}
+  \section{\textbf{Problem}}
+  Let $\mathbb{V}$ be the set of all complex-valued functions f on the real line such that
+  \begin{align*}f(-t)=\overline{f(t)}\end{align*}The bar denotes complex conjugation.Show that $\mathbb{V}$,with the operations\begin{align*}(f+g)(t)=f(t)+g(t)\\(cf)(t)=cf(t)\end{align*} is a vector space over the field of real numbers. Give an example of a function in V which is not real valued.
+ \section{\textbf{Solution}}
+ Let's start by showing that scalar multiplication and vector addition is defined on set $\mathbb{V}$
+ Let's take c $\in$ $\mathbb{R}$
+ \begin{align}
+ \implies(cf)(-t)\\=cf(-t)\\=c\overline{f(t)}\\=\overline{cf(t)}
+ \end{align}
+ Now for vector addition,
+ Let's take f(-t)=f(t) and g(-t)=g(t) then (f+g) should also show the property (f+g)(-t)=(f+g)(t)
+ \begin{align}
+ \implies(f+g)(-t)\\=f(-t)+g(-t)\\=\overline{f(t)}+\overline{g(t)}\\=\overline{f(t)+g(t)}
+ \end{align}
+ Hence both scalar multiplication and vector addition hold true.Now we have to prove that the functions $\in$ $\mathbb{V}$ hold the following properties,
+  \begin{enumerate}
+\item{Addition should be commutative}
+\begin{align}
+(f+g)(t)=f(t)+g(t)\\=g(t)+g(t)\\=(g+f)(t)
+\end{align}
+\item{Addition is associative}
+\begin{align}
+((f+g)+a)(t)=(f+g)(t)+a(t)\\=f(t)+g(t)+a(t)\\=(f(t)+g(t))+a(t)\\=f(t)+(g(t)+a(t))
+\end{align}
+\item{Additive Identity exists}
+\begin{align}
+(f+0)(t)=f(t)+0(t)\\f(t)+0\\f(t)
+\end{align}
+Zero function is in $\mathbb{V}$ since -0=$\overline{0}$.
+\item{Additive inverse exists}
+\begin{align}
+f+(-f)=f(t)+(-f)\\=f(t)-f(t)\\=0
+\end{align}
+\item{Multiplicative identity exists}
+\begin{align}1.f=f\end{align} for all f $\in$ \mathbb{V}
+\item{Scalar multiplication is associative}
+\begin{align}
+(ab).f=((ab).f)(t)\\=a(bf(t))\\=a(b.f)\\=a.(b.f)
+\end{align}
+a,b $\in$ \mathbb{R}
+\item{Scalar constant is distributive}
+\begin{align}
+a(f+g)=af+ag
+\end{align}
+a $\in$ \mathbb{R}
+\item{Scalar addition is distributive}
+\begin{align}
+(a+b)f=af+bf
+\end{align}
+a,b $\in$ \mathbb{R}
+\section{\textbf{Example}}
+Let's take f(x)=a+ix
+\begin{align}
+f(1)=a+i
+\end{align}
+Hence, f(x) is not real valued.Now,
+\begin{align}
+f(x)=a+ix\\
+f(-x)=a-ix\\
+f(-x)=\overline{f(x)}
+\end{align}
+Since a,b and x $\in$ $\mathbb{R}$, so f $\in$ $\mathbb{V}$
+ \end{document}
