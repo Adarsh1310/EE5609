@@ -1,1 +1,164 @@
-aa
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+  \usepackage{setspace}
+  \usepackage{gensymb}
+  \usepackage{graphicx}
+  \singlespacing
+ \graphicspath{ {/user/adarshsrivastava/desktop/Matrix Theory/Assignemnt_7} }
+  \usepackage[cmex10]{amsmath}
+  \usepackage{amsthm}
+  \usepackage{hyperref}
+  \usepackage{mathrsfs}
+  \usepackage{txfonts}
+  \usepackage{stfloats}
+  \usepackage{bm}
+  \usepackage{cite}
+  \usepackage{cases}
+  \usepackage{subfig}
+  \usepackage{longtable}
+  \usepackage{multirow}
+  \usepackage{enumitem}
+  \usepackage{mathtools}
+  \usepackage{steinmetz}
+  \usepackage{tikz}
+  \usepackage{circuitikz}
+  \usepackage{verbatim}
+  \usepackage{tfrupee}
+  \usepackage[breaklinks=true]{hyperref}
+  \usepackage{tkz-euclide}
+  \usetikzlibrary{calc,math}
+  \usepackage{listings}
+      \usepackage{color}                                            %%
+      \usepackage{array}                                            %%
+      \usepackage{longtable}                                        %%
+      \usepackage{calc}                                             %%
+      \usepackage{multirow}                                         %%
+      \usepackage{hhline}                                           %%
+      \usepackage{ifthen}                                           %%
+      \usepackage{lscape}     
+  \usepackage{multicol}
+  \usepackage{chngcntr}
+  \DeclareMathOperator*{\Res}{Res}
+  \renewcommand\thesection{\arabic{section}}
+  \renewcommand\thesubsection{\thesection.\arabic{subsection}}
+  \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+  \renewcommand\thesectiondis{\arabic{section}}
+  \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+  \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+  \hyphenation{op-tical net-works semi-conduc-tor}
+  \def\inputGnumericTable{}                                 %%
+  \lstset{
+  %language=C,
+  frame=single, 
+  breaklines=true,
+  columns=fullflexible
+  }
+  \begin{document}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{problem}{Problem}
+  \newtheorem{proposition}{Proposition}[section]
+  \newtheorem{lemma}{Lemma}[section]
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{example}{Example}[section]
+  \newtheorem{definition}[problem]{Definition}
+  \newcommand{\BEQA}{\begin{eqnarray}}
+  \newcommand{\EEQA}{\end{eqnarray}}
+  \newcommand{\define}{\stackrel{\triangle}{=}}
+  \bibliographystyle{IEEEtran}
+  \providecommand{\mbf}{\mathbf}
+  \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+  \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+  \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+  \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+  \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+  \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+  \providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+  \providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+  \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+  \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+  \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+  \theoremstyle{remark}
+  \newtheorem{rem}{Remark}
+  \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+  \providecommand{\abs}[1]{\left\vert#1\right\vert}
+  \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+  \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+  %\providecommand{\norm}[1]{\lVert#1\rVert}
+  \providecommand{\mtx}[1]{\mathbf{#1}}
+  \providecommand{\mean}[1]{E\left[ #1 \right]}
+  \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+  %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+  \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+  	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+  \newcommand{\solution}{\noindent \textbf{Solution: }}
+  \newcommand{\cosec}{\,\text{cosec}\,}
+  \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+  \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+  \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+  \numberwithin{equation}{subsection}
+  \makeatletter
+  \@addtoreset{figure}{problem}
+  \makeatother
+  \let\StandardTheFigure\thefigure
+  \let\vec\mathbf
+  \renewcommand{\thefigure}{\theproblem}
+  \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+       \def\rightbox#1{\makebox[0in][r]{#1}}
+       \def\centbox#1{\makebox[0in]{#1}}
+       \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+       \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+  \vspace{3cm}
+  \title{Assignment 15}
+  \author{Adarsh Srivastava}
+  \maketitle
+  \newpage
+  \bigskip
+  %\renewcommand{\thefigure}{\theenumi}
+  \renewcommand{\thetable}{\theenumi}
+  The link to the solution is
+  \begin{lstlisting}
+   https://github.com/Adarsh1310/EE5609
+  \end{lstlisting}
+  \begin{abstract}
+  This documents solves a problem based on vector subspaces.
+  \end{abstract}
+   \section{\textbf{Problem}}
+ Let $\mathbb{W}$ be the set of all $(x_1,x_2,x_3,x_4,x_5)$ in $\vec{R}^5$ which satisfy
+ \begin{align*}
+ 2x_1-x_2+\frac{4}{3}x_3-x_4=0\\x_1+\frac{2}{3}x_3-x_5=0\\9x_1-3x_2+6x_3-3x_4-3x_5=0
+ \end{align*}
+ Find a finite set of vectors which spans W.
+   \section{\textbf{Solution}}
+   The above vectors can be written as,
+   \begin{align}
+   \alpha_1=(2,-1,\frac{4}{3},-1,0)\\
+   \alpha_2=(1,0,\frac{2}{3},0,-1)\\
+   \alpha_3=(9,-3,6,-3,-3)
+   \end{align}
+   Vector $\aplha$ is in the subspace W of $\vec{R}^5$ spanned by $\alpha_1$, $\alpha_2$ and $ \alpha_3$ if and only if there exist scalars $c_1$,$c_2$ in $\vec{R}$. We can see that $\alpha_3$ is a linear combination of $\alpha_1$ and $\alpha_2$.So,
+    \begin{align}
+   \alpha=c_1\alpha_1+c_2\alpha_2
+   \end{align}
+   W consists all vector of the form,
+   \begin{align}
+   \alpha=(2c_1+c_2,-1c_1,\frac{4}{3}c_1+\frac{2}{3}c_2,-1c_1,-c_2)
+   \end{align}
+   where $c_1$,$c_2$  are scalar constant. Alternatively it can be written as
+   \begin{align}
+   \alpha=(x_1,x_2,x_3,x_4,x_5)
+   \end{align}
+   with $x_i$ in $\vec{R}$
+   \begin{align}
+   2x_1-x_2+\frac{4}{3}x_3-x_4=0\\
+   x_1+\frac{2}{3}x_3-x_5=0
+   \end{align}
+   which can be written as,
+   \begin{align}
+   x_1=-\frac{2}{3}x_3+x_5\\x_2=-x_4+2x_5
+   \end{align}
+   Hence,
+   \begin{align}
+   \mathbb{W}=(-\frac{2}{3}x_3+x_5,x_4+2x_5,x_3,x_4,x_5)\end{align}\begin{align}
+   =\left(-\frac{2}{3},0,1,0,0\right)x_3+\left(0,-1,0,1,0\right)x_4+(1,2,0,0,1)x_5
+   \end{align}
+   So,(-$\frac{2}{3}$,0,1,0,0),(0,-1,0,1,0) and (1,2,0,0,1) will span $\vec{W}$.
+   \end{document}
