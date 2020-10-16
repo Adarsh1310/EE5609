@@ -130,23 +130,23 @@
    \section{\textbf{Solution}}
    The above vectors can be written as,
    \begin{align}
-   \vec{\alpha_1}=(2,-1,\frac{4}{3},-1,0)\\
-   \vec{\alpha_2}=(1,0,\frac{2}{3},0,-1)\\
-   \vec{\alpha_3}=(9,-3,6,-3,-3)
+   \vec{\alpha_1}=\myvec{2\\-1\\\frac{4}{3}\\-1\\0}\\
+   \vec{\alpha_2}=\myvec{1\\0\\\frac{2}{3}\\0\\-1}\\
+   \vec{\alpha_3}=\myvec{9\\-3\\6\\-3\\-3}
    \end{align}
-   Vector $\aplha$ is in the subspace $\vec{W}$ of $\mathbb{R}^5$ spanned by $\vec{\alpha_1}$, $\vec{\alpha_2}$ and $ \vec{\alpha_3}$ if and only if there exist scalars $c_1$,$c_2$ as real numbers.We can see that $\vec{\alpha_3}$ is a linear combination of $\vec{\alpha_1}$ and $\vec{\alpha_2}$.So,
+   Vector $\aplha$ is in the subspace $\vec{W}$ of $\mathbb{R}^5$ spanned by $\vec{\alpha_1}$, $\vec{\alpha_2}$ and $ \vec{\alpha_3}$ if and only if there exist scalars $c_1$,$c_2$ as real numbers.We can see that $\vec{\alpha_3}$ is a linear combination of $\vec{\alpha_1}$ and $\vec{\alpha_2}$.
+   \begin{align}
+   \vec{\alpha}=3\myvec{2\\-1\\\frac{4}{3}\\-1\\0}+3\myvec{1\\0\\\frac{2}{3}\\0\\-1}
+   \end{align}
+    So,
     \begin{align}
    \vec{\alpha}=c_1\vec{\alpha_1}+c_2\vec{\alpha_2}
    \end{align}
    $\vec{W}$ consists all vector of the form,
    \begin{align}
-   \vec{\alpha}=(2c_1+c_2,-1c_1,\frac{4}{3}c_1+\frac{2}{3}c_2,-1c_1,-c_2)
+   \vec{\alpha}=\myvec{2c_1+c_2\\-1c_1\\\frac{4}{3}c_1+\frac{2}{3}c_2\\-1c_1\\-c_2}
    \end{align}
-   where $c_1$,$c_2$  are scalar constant. Alternatively it can be written as
-   \begin{align}
-   \vec{\alpha}=(x_1,x_2,x_3,x_4,x_5)\label{alpha}
-   \end{align}
-   with $x_i$ in $\mathbb{R}$
+   where $c_1$,$c_2$  are scalar constant. Alternatively,
    \begin{align}
    2x_1-x_2+\frac{4}{3}x_3-x_4=0\\
    x_1+\frac{2}{3}x_3-x_5=0
@@ -172,12 +172,9 @@ Solving the equations we get,
 x_1=-\frac{2}{3}x_3+x_5\\
 x_2=-x_4+2x_5
 \end{align}
-From above we can see that $x_3,x_4$ and $x_5$ are free variables
-   Hence \eqref{alpha} can be written as,
+which can be written as,
    \begin{align}
-   \vec{\alpha}=(-\frac{2}{3}x_3+x_5,-x_4+2x_5,x_3,x_4,x_5)\end{align}
-   \begin{align}
-   =(-\frac{2}{3},0,1,0,0)x_3+(0,-1,0,1,0)x_4+(1,2,0,0,1)x_5
-   \end{align}
-   such that $x_3$,$x_4$ and $x_5$ $\in$ $\mathbb{R}$.So,(-$\frac{2}{3}$,0,1,0,0),(0,-1,0,1,0) and (1,2,0,0,1) will span $\vec{W}$.
-   \end{document}
+   \vec{x} = \myvec{x_1\\x_2\\x_3 \\ x_4 \\ x_5} \\= \myvec{-\frac{2}{3}x_3+x_5\\-x_4+2x_5\\x_3 \\ x_4 \\ x_5}\\=x_3\myvec{-\frac{2}{3}\\0\\1\\0\\0} +x_4\myvec{0\\-1\\0\\1\\0}+x_5\myvec{1\\2\\0\\0\\1}
+\end{align}
+where $x_3$,$x_4$ and $x_5$ $\in$ $\mathbb{R}$.Hence, the vectors $\myvec{-\frac{2}{3}\\0\\1\\0\\0},\myvec{0\\-1\\0\\1\\0}$ and $\myvec{1\\2\\0\\0\\1}$ will span $\vec{W}$
+\end{document}
