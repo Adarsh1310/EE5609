@@ -122,41 +122,62 @@
   This documents solves a problem based on vector subspaces.
   \end{abstract}
    \section{\textbf{Problem}}
- Let $\mathbb{W}$ be the set of all $(x_1,x_2,x_3,x_4,x_5)$ in $\vec{R}^5$ which satisfy
+ Let $\vec{W}$ be the set of all $(x_1,x_2,x_3,x_4,x_5)$ in $\mathbb{R}^5$ which satisfy
  \begin{align*}
  2x_1-x_2+\frac{4}{3}x_3-x_4=0\\x_1+\frac{2}{3}x_3-x_5=0\\9x_1-3x_2+6x_3-3x_4-3x_5=0
  \end{align*}
- Find a finite set of vectors which spans W.
+ Find a finite set of vectors which spans $\vec{W}$.
    \section{\textbf{Solution}}
    The above vectors can be written as,
    \begin{align}
-   \alpha_1=(2,-1,\frac{4}{3},-1,0)\\
-   \alpha_2=(1,0,\frac{2}{3},0,-1)\\
-   \alpha_3=(9,-3,6,-3,-3)
+   \vec{\alpha_1}=(2,-1,\frac{4}{3},-1,0)\\
+   \vec{\alpha_2}=(1,0,\frac{2}{3},0,-1)\\
+   \vec{\alpha_3}=(9,-3,6,-3,-3)
    \end{align}
-   Vector $\aplha$ is in the subspace W of $\vec{R}^5$ spanned by $\alpha_1$, $\alpha_2$ and $ \alpha_3$ if and only if there exist scalars $c_1$,$c_2$ in $\vec{R}$. We can see that $\alpha_3$ is a linear combination of $\alpha_1$ and $\alpha_2$.So,
+   Vector $\aplha$ is in the subspace $\vec{W}$ of $\mathbb{R}^5$ spanned by $\vec{\alpha_1}$, $\vec{\alpha_2}$ and $ \vec{\alpha_3}$ if and only if there exist scalars $c_1$,$c_2$ as real numbers.We can see that $\vec{\alpha_3}$ is a linear combination of $\vec{\alpha_1}$ and $\vec{\alpha_2}$.So,
     \begin{align}
-   \alpha=c_1\alpha_1+c_2\alpha_2
+   \vec{\alpha}=c_1\vec{\alpha_1}+c_2\vec{\alpha_2}
    \end{align}
-   W consists all vector of the form,
+   $\vec{W}$ consists all vector of the form,
    \begin{align}
-   \alpha=(2c_1+c_2,-1c_1,\frac{4}{3}c_1+\frac{2}{3}c_2,-1c_1,-c_2)
+   \vec{\alpha}=(2c_1+c_2,-1c_1,\frac{4}{3}c_1+\frac{2}{3}c_2,-1c_1,-c_2)
    \end{align}
    where $c_1$,$c_2$  are scalar constant. Alternatively it can be written as
    \begin{align}
-   \alpha=(x_1,x_2,x_3,x_4,x_5)
+   \vec{\alpha}=(x_1,x_2,x_3,x_4,x_5)\label{alpha}
    \end{align}
-   with $x_i$ in $\vec{R}$
+   with $x_i$ in $\mathbb{R}$
    \begin{align}
    2x_1-x_2+\frac{4}{3}x_3-x_4=0\\
    x_1+\frac{2}{3}x_3-x_5=0
    \end{align}
    which can be written as,
    \begin{align}
-   x_1=-\frac{2}{3}x_3+x_5\\x_2=-x_4+2x_5
+  \myvec{2&-1&\frac{4}{3}&-1&0\\1&0&\frac{2}{3}&0&-1}\vec{x}=0
    \end{align}
-   Hence,
+   Now, the augmented matrix,
    \begin{align}
-   \alpha=(-\frac{2}{3}x_3+x_5,-x_4+2x_5,x_3,x_4,x_5)\end{align}
-   So,(-$\frac{2}{3}$,0,1,0,0),(0,-1,0,1,0) and (1,2,0,0,1) will span $\vec{W}$.
+     \myvec{2&-1&\frac{4}{3}&-1&0&\vrule&0\\1&0&\frac{2}{3}&0&-1&\vrule& 0}\\
+     \xleftrightarrow{R_2=R_2-\frac{1}{2}R_1}\myvec{2&-1&\frac{4}{3}&-1&0&\vrule&0\\0&\frac{1}{2}&0&\frac{1}{2}&-1&\vrule& 0}\\
+      \xleftrightarrow{R_2=2R_2}\myvec{2&-1&\frac{4}{3}&-1&0&\vrule&0\\0&1&0&1&-2&\vrule& 0}\\
+      \xleftrightarrow{R_1=R_1+R_2}\myvec{2&0&\frac{4}{3}&0&-2&\vrule&0\\0&1&0&1&-2&\vrule& 0}
+\end{align}
+So,
+\begin{align}
+2x_1+\frac{4}{3}x_3-2x_5=0\\
+x_2+x_4-2x_5=0
+\end{align}
+Solving the equations we get,
+\begin{align}
+x_1=-\frac{2}{3}x_3+x_5\\
+x_2=-x_4+2x_5
+\end{align}
+From above we can see that $x_3,x_4$ and $x_5$ are free variables
+   Hence \eqref{alpha} can be written as,
+   \begin{align}
+   \vec{\alpha}=(-\frac{2}{3}x_3+x_5,-x_4+2x_5,x_3,x_4,x_5)\end{align}
+   \begin{align}
+   =(-\frac{2}{3},0,1,0,0)x_3+(0,-1,0,1,0)x_4+(1,2,0,0,1)x_5
+   \end{align}
+   such that $x_3$,$x_4$ and $x_5$ $\in$ $\mathbb{R}$.So,(-$\frac{2}{3}$,0,1,0,0),(0,-1,0,1,0) and (1,2,0,0,1) will span $\vec{W}$.
    \end{document}
