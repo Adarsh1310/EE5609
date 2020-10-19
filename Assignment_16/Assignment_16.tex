@@ -124,16 +124,16 @@
    \section{\textbf{Problem}}
    Let $\vec{V}$ be a vector space over a subfield $\vec{F}$ of complex numbers. Suppose $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ are linearly independent vectors in $\vec{V}$. Prove that ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) are linearly independent.
    \section{\textbf{Solution}}
-   Let $\alpha$, $\beta$ and $\gamma$ be three n$\times$ 1 dimensional vectors. We know that ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) will also have the same number of rows as $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ so, we need to prove that,
+   Let $\alpha$, $\beta$ and $\gamma$ be three n$\times$ 1 dimensional vectors. We need to prove that,
    \begin{align}
    \myvec{\alpha+\beta&\beta+\gamma&\gamma+\alpha}\myvec{x_1\\x_2\\x_3}=0
   \end{align}
-     will only have a trivial solution.
+     will only have a trivial solution.The above equation can be written as
   \begin{align}
-   x_1(\alpha+\beta)+x_2(\beta+\gamma)+x_3(\gamma+\alpha)=0
-   \\x_1\alpha+x_1\beta+x_2\beta+x_2\gamma+x_3\gamma+x_3\alpha=0\\
-   (x_1+x_3)\alpha+(x_1+x_2)\beta+(x_2+x_3)\gamma=0
+  \myvec{x_1\\x_2\\x_3}^T\myvec{\alpha+\beta&\beta+\gamma&\gamma+\alpha}^T=0\\
+   \myvec{x_1&x_2&x_3}\myvec{1&1&0\\0&1&1\\1&0&1}\myvec{\alpha^T\\\beta^T\\\gamma^T}=0\\
+   \myvec{x_1+x_2&x_1+x_3&x_2+x_3}\myvec{\alpha^T\\\beta^T\\\gamma^T}=0\label{final}
    \end{align}
-Since, $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ are independent then all the scalar multiplication to these will be zero hence, ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) are linearly independent.
+Since, $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ are independent Hence \eqref{final} will have a trivial solution and so, ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) are linearly independent.
 \end{document}
 
