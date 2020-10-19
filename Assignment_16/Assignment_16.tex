@@ -126,14 +126,17 @@
    \section{\textbf{Solution}}
    Let $\alpha$, $\beta$ and $\gamma$ be three n$\times$ 1 dimensional vectors. We need to prove that,
    \begin{align}
-   \myvec{\alpha+\beta&\beta+\gamma&\gamma+\alpha}\myvec{x_1\\x_2\\x_3}=0
+   \myvec{\alpha+\beta&\beta+\gamma&\gamma+\alpha}\vec{x}=0
   \end{align}
      will only have a trivial solution.The above equation can be written as
   \begin{align}
-  \myvec{x_1\\x_2\\x_3}^T\myvec{\alpha+\beta&\beta+\gamma&\gamma+\alpha}^T=0\\
-   \myvec{x_1&x_2&x_3}\myvec{1&1&0\\0&1&1\\1&0&1}\myvec{\alpha^T\\\beta^T\\\gamma^T}=0\\
-   \myvec{x_1+x_3&x_1+x_2&x_2+x_3}\myvec{\alpha^T\\\beta^T\\\gamma^T}=0\label{final}
+  \myvec{\alpha&\beta&\gamma} \myvec{1&0&1\\1&1&0\\0&1&1}\vec{x}=0\\
+   \vec{x}^T\myvec{1&1&0\\0&1&1\\1&0&1}\myvec{\alpha^T\\\beta^T\\\gamma^T}=0\label{final}
    \end{align}
-Since, $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ are independent Hence \eqref{final} will have a trivial solution and so, ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) are linearly independent.
+Since, $\vec{\alpha}$, $\vec{\beta}$ and $\vec{\gamma}$ are independent.
+\begin{align}
+ \vec{x}^T\myvec{1&1&0\\0&1&1\\1&0&1}=0
+\end{align} 
+Hence,$\vec{x}$ is a zero vector.So, ($\vec{\alpha}$+$\beta$),($\vec{\beta}$+$\vec{\gamma}$) and ($\vec{\gamma}$+$\vec{\alpha}$) are linearly independent.
 \end{document}
 
