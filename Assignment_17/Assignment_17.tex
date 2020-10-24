@@ -138,19 +138,31 @@
    \section{\textbf{Solution}}
    Let's start by proving that $\{g_1,g_2,g_3\}$ are linearly independent,
    \begin{align}
-   \myvec{a&b&c}\myvec{g_1\\g_2\\g_3}=0\\
-   \myvec{a&b&c}\myvec{1\\x+t\\(x+t)^2}=0\label{eqn:1}\\
-   \myvec{a&b&c}\left(\myvec{1\\x\\x^2}+\myvec{0\\t\\2t}+\myvec{0\\0\\t^2}\right)=0\\
+   \myvec{a&b&c}\myvec{1&0&0\\t&1&0\\t^2&2t&1}\myvec{1\\x\\x^2}=0\\
+   \myvec{1&x&x^2}\myvec{1&t&t^2\\0&1&2t\\0&0&1}\myvec{a\\b\\c}=0\\
+   \vec{ABc}=0
    \end{align}
-   We know that $\myvec{1\\x\\x^2}$ is independent hence the values of a,b and c will be 0. Hence $\{g_1,g_2,g_3\}$ are linearly independent.
-   Now, equating \eqref{eqn:1} and f(x)
-  \begin{align}
-  f(x)= \myvec{a&b&c}\myvec{1\\x+t\\(x+t)^2}\\
-\myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a&b&c}\myvec{1\\x+t\\(x+t)^2}\\
-\myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a&b&c}\left(\myvec{1\\x\\x^2}+\myvec{0\\t\\2t}+\myvec{0\\0\\t^2}\right)\\
+   Now,taking $\vec{B}$ and applying row reduce operations,
+   \begin{align}
+   \myvec{1&t&t^2\\0&1&2t\\0&0&1}\\
+   &\xleftrightarrow{R_1 = R_1-tR_2}\myvec{1&0&t^2\\0&1&2t\\0&0&1}\\
+   &\xleftrightarrow{R_1 = R_1-t^2R_3}\myvec{1&0&0\\0&1&2t\\0&0&1}\\
+    &\xleftrightarrow{R_2 = R_2-2tR_3}\myvec{1&0&0\\0&1&0\\0&0&1}
+   \end{align}
+   Since $\vec{B}$ is linearly independent so $\vec{c}$ will be zero vector. 
+   We know that $\vec{c}$ is in the nullspace of $\vec{B}$ and hence it will also be in the nullspace of $\vec{AB}$.So,$\{g1,g2,g3\}$ are linearly independent.Now, to find the coordinates,
+  \begin{multline}
+\myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a&0&0}\myvec{1\\x\\x^2}+\\\myvec{bt&b&0}\myvec{1\\x\\x^2}+\myvec{ct^2&2ct&c}\myvec{1\\x\\x^2}\end{multiline}
+\begin{align}
 \myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a+bt+ct^2&b+2ct&c}\myvec{1\\x\\x^2}
   \end{align} 
-  Hence,
+  From above we can see that,
+  \begin{align}
+  c_2=c\\
+  c_1=b+2ct\\
+  c_0=a+bt+ct^2
+  \end{align}
+Solving the above equation we get,
   \begin{align}
   c=c_2\\
   b=c_1-2c_2t\\
