@@ -136,21 +136,20 @@
    \end{align*}
    what are the coordinates of f in the ordered basis $\beta$
    \section{\textbf{Solution}}
-   Let's start by proving that $\{g_1,g_2,g_3\}$ are linearly independent,
+  . Assuming $\myvec{1\\x\\x^2}$ to be independent. Let's start by proving that $\{g_1,g_2,g_3\}$ are linearly independent,
    \begin{align}
-   \myvec{a&b&c}\myvec{1&0&0\\t&1&0\\t^2&2t&1}\myvec{1\\x\\x^2}=0\\
-   \myvec{1&x&x^2}\myvec{1&t&t^2\\0&1&2t\\0&0&1}\myvec{a\\b\\c}=0\\
-   \vec{ABc}=0
-   \end{align}
-   Now,taking $\vec{B}$ and applying row reduce operations,
+   \vec{v}^T\myvec{g_1\\g_2\\g_3}=0\\
+    \vec{v}^T\myvec{1&0&0\\t&1&0\\t^2&2t&1}\myvec{1\\x\\x^2}=0
+  \end{align}
+   Since $\myvec{1\\x\\x^2}$ is linearly independent so,
    \begin{align}
-   \myvec{1&t&t^2\\0&1&2t\\0&0&1}\\
-   &\xleftrightarrow{R_1 = R_1-tR_2}\myvec{1&0&t^2\\0&1&2t\\0&0&1}\\
-   &\xleftrightarrow{R_1 = R_1-t^2R_3}\myvec{1&0&0\\0&1&2t\\0&0&1}\\
-    &\xleftrightarrow{R_2 = R_2-2tR_3}\myvec{1&0&0\\0&1&0\\0&0&1}
-   \end{align}
-   Since $\vec{B}$ is linearly independent so $\vec{c}$ will be zero vector. 
-   We know that $\vec{c}$ is in the nullspace of $\vec{B}$ and hence it will also be in the nullspace of $\vec{AB}$.So,$\{g1,g2,g3\}$ are linearly independent.Now, to find the coordinates,
+    \vec{v}^T\myvec{1&0&0\\t&1&0\\t^2&2t&1}=0
+   \end{align} 
+   Now, since the 3 $\times$ 3 matrix is linearly independent we can say tha $\vec{v}$ is zero and hence $\{g_1,g_2,g_3\}$ will be linearly independent.
+  Now, to find the coordinates,
+  \begin{align}
+  f(x)=ag_1+bg_2+cg_3
+  \end{align}
   \begin{multline}
 \myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a&0&0}\myvec{1\\x\\x^2}+\\\myvec{bt&b&0}\myvec{1\\x\\x^2}+\myvec{ct^2&2ct&c}\myvec{1\\x\\x^2}\end{multiline}
 \begin{align}
