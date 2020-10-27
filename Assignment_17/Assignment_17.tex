@@ -136,33 +136,39 @@
    \end{align*}
    what are the coordinates of f in the ordered basis $\beta$
    \section{\textbf{Solution}}
-  Let's start by proving that $\{g_1,g_2,g_3\}$ are linearly independent,
+   We start by taking,\begin{align}\vec{f}=\myvec{1\\x\\x^2}\end{align}
+   Let's start by proving that $\vec{g}$ is linearly independent.
     \begin{align}
-    \vec{v}\myvec{g_1\\g_2\\g_3}=0\\
-    \vec{v}\myvec{1&0&0\\t&1&0\\t^2&2t&1}\myvec{1\\x\\x^2}=0\\
-    \myvec{1&x&x^2}\myvec{1&t&t^2\\0&1&2t\\0&0&1}\vec{v}^T=0\\
-    \vec{ABv^T}=0
+    \vec{g}=\vec{B}\vec{f}
     \end{align}
-    Now,taking $\vec{B}$ and applying row reduce operations,
+    where,
     \begin{align}
-    \myvec{1&t&t^2\\0&1&2t\\0&0&1}\\
-    &\xleftrightarrow{R_1 = R_1-tR_2}\myvec{1&0&t^2\\0&1&2t\\0&0&1}\\
-    &\xleftrightarrow{R_1 = R_1-t^2R_3}\myvec{1&0&0\\0&1&2t\\0&0&1}\\
-     &\xleftrightarrow{R_2 = R_2-2tR_3}\myvec{1&0&0\\0&1&0\\0&0&1}
+    \vec{B}=\myvec{1&0&0\\t&1&0\\t^2&2t&1}
     \end{align}
-    Hence, 
+    Now,
     \begin{align}
-    \vec{B}\vec{v^T}=0
+    \vec{v}^T\vec{g}=0\\
+    \implies \vec{v}^T\vec{B}\vec{f}=0
     \end{align}
-    will have only trivial solution.
- We know that $\vec{v}$ is in the nullspace of $\vec{B}$ and hence it will also be in the nullspace of $\vec{AB}$.So,$\{g1,g2,g3\}$ are linearly independent.  Now, to find the coordinates,
+    Since $\vec{f}$ is linearly independent,
+    \begin{align}
+     \vec{v}^T\vec{B}=0
+    \end{align}
+    We can se that the rows of $\vec{B}$ are linearly independent and hence $\vec{v}^T$ will be zero vector.
+  Now, to find the coordinates,
   \begin{align}
-  f(x)=ag_1+bg_2+cg_3
+  f(x)=\vec{w}^T\vec{g}
   \end{align}
+  where,
+  \begin{align}
+  \vec{w}=\myvec{a\\b\\c}
+  \end{align}
+  So,
   \begin{multline}
-\myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a&0&0}\myvec{1\\x\\x^2}+\\\myvec{bt&b&0}\myvec{1\\x\\x^2}+\myvec{ct^2&2ct&c}\myvec{1\\x\\x^2}\end{multiline}
+\vec{c}\vec{f}^T=\myvec{a\\0\\0}\vec{f}^T+\myvec{bt\\b\\0}\vec{f}^T+\myvec{ct^2\\2ct\\c}\vec{f}^T\end{multiline}
 \begin{align}
-\myvec{c_0&c_1&c_2}\myvec{1\\x\\x^2}=\myvec{a+bt+ct^2&b+2ct&c}\myvec{1\\x\\x^2}
+\vec{c}\vec{f}^T=\left(\myvec{a\\0\\0}+\myvec{bt\\b\\0}+\myvec{ct^2\\2ct\\c}\right)\vec{f}^T\\
+\myvec{c_0\\c_1\\c_2}\vec{f}=\myvec{a+bt+ct^2\\b+2ct\\c}\vec{f}^T
   \end{align} 
   From above we can see that,
   \begin{align}
@@ -176,7 +182,7 @@ Solving the above equation we get,
   b=c_1-2c_2t\\
   a=c_0-c_1t+c_2t^2
   \end{align}
-  So, finally the coordinates of f in ordered basis of $\beta$,
+  So, finally the coordinates will be,
   \begin{align}
   \myvec{c_0-c_1t+c_2t^2\\c_1-2c_2t\\c_2}
   \end{align}
