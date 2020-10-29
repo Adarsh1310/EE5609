@@ -155,12 +155,7 @@
      \vec{v}^T\vec{B}=0\\
      \vec{B}^T\vec{v}=0
     \end{align}
-   Let's prove that $\vec{B}^T$ is invertible,
-   \begin{align}
-   \myvec{1&t&t^2\\0&1&2t\\0&0&1}=\myvec{1&0&0\\0&1&2t\\0&0&1}\myvec{1&0&t^2\\0&1&0\\0&0&1}\myvec{1&t&0\\0&1&0\\0&0&1}\\
-   =\vec{E_1}\vec{E_2}\vec{E_3}
-   \end{align}
-   Since $\vec{B}^T$ can be written as a combination of elementary matrices, it is invertible matrix and hence $\vec{v}$ will be zero vector.
+   Since $\vec{B}^T$ is an upper triangular matrix with non zero values in principal diagonal  , it is invertible matrix and hence $\vec{v}$ will be zero vector.
    Now, to find the coordinates,
   \begin{align}
   f(x)=\vec{w}^T\vec{g}
@@ -177,12 +172,7 @@
   \vec{c}^T=\vec{w}^T\vec{B}\\
   \vec{c}^T\vec{B}^{-1}=\vec{w}^T\\
    (\vec{B}^{-1})^T\vec{c}=\vec{w}\\
-  (\vec{E_3}^{-1}\vec{E_2}^{-1}\vec{E_1}^{-1})^T\vec{c}=\vec{w}\\
   \myvec{1&-t&t^2\\0&1&-2t\\0&0&1}\myvec{c_0\\c_1\\c_2}=\vec{w}
   \end{align} 
-  So, finally the coordinates will be,
-  \begin{align}
-  \myvec{c_0-c_1t+c_2t^2\\c_1-2c_2t\\c_2}
-  \end{align}
 \end{document}
 
