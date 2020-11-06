@@ -135,9 +135,8 @@ T(\in_2)=\myvec{c\\d}
 \end{align}
  Now,let's assume $\in_1$ and $\in_2$ as linearly independent. So the linear transformation T for any vector $\vec{v}$ in two dimensional space will be,
 \begin{align}
-T(\vec{v})=\myvec{T(\vec{\in_1})&T(\vec{\in_2})}\myvec{k_1\\k_2}\\
-=\myvec{a&c\\b&d}\myvec{k_1\\k_2}\label{range}\\
-=\vec{A}\vec{v}
+T(\vec{v})=\myvec{T(\vec{\in_1})&T(\vec{\in_2})}\vec{v}\\
+=\myvec{a&c\\b&d}\vec{v}\label{range}\\
 \end{align}
 Now, there can be two cases here, transformation of linearly independent vector can be independent or it can be dependent.Considering the first case and \eqref{range} we can say that,
 \begin{align}
@@ -157,7 +156,7 @@ T(\vec{v})=T(\in_1)+T(\in_2)\\
 We can see from above equation that when $\in_1$ and $\in_2$ as linearly dependent then the transformation T will be along the line only.
 \begin{tabular}{|c|c|} \hline
 \textbf{Vectors Independent} & \textbf{Vectors Dependent}  \\ \hline
-\makecell{T(\vec{v})=\myvec{a&c\\b&d}\myvec{k_1\\k_2} & T(\vec{v})=(k+1)\myvec{a\\b} } \\ \hline
+\makecell{$T(\vec{v})$=\myvec{a&c\\b&d}$\vec{v}$ & $T(\vec{v})$=(k+1)\myvec{a\\b} } \\ \hline
 \makecell{Output:& Output:
           \\On the plane & On the line \\\hline}
 \end{tabular}
