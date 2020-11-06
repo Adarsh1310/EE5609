@@ -122,21 +122,44 @@
   This documents solves a problem based on Linear Transformation.
   \end{abstract}
    \section{\textbf{Problem}}
-Describe explicitly the linear transformation T from $\mathbb{F}^2$ into $\mathbb{F}^2$ such that T_{$\in$_1 }=(a,b),T_{$\in$_2}=(c,d).
+Describe explicitly the linear transformation T from $\mathbb{F}^2$ into $\mathbb{F}^2$ such that T_({$\in$_1 })=(a,b),T_({$\in$_2})=(c,d).
 \section{\textbf{Solution}}
 We are given a linear transformation,
 \begin{align}
-T:\mathbb{F}^2 \xrightarrow \mathbb{F}^2
+T:\mathbb{F}^2 \xrightarrow{} {\mathbb{F}^2}
 \end{align} 
 This means that T takes a two dimensional vector and returns another vector in two dimensional space after performing some linear transformation.
 \begin{align}
-T(\in_1)=\vec{A}\in_1\\
-T(\in_2)=\vec{A}\in_2
+T(\in_1)=\myvec{a\\b}\\
+T(\in_2)=\myvec{c\\d}
 \end{align}
-Where $\vec{A}$ is a matrix that performs the linear transformation. Now,let's assume $\in_1$ and $\in_2$ as linearly independent. So the linear transformation T for any vector $\vec{V}$ in two dimensional space will be,
+ Now,let's assume $\in_1$ and $\in_2$ as linearly independent. So the linear transformation T for any vector $\vec{v}$ in two dimensional space will be,
 \begin{align}
-T(\vec{V})=\myvec{c_1&c_2}\myvec{T(\in_1)\\T(\in_2)}\\
-=c_1\vec{A}\in_1+c_2\vec{A}\in_2
+T(\vec{v})=\myvec{T(\vec{\in_1})&T(\vec{\in_2})}\myvec{k_1\\k_2}\\
+=\myvec{a&c\\b&d}\myvec{k_1\\k_2}\label{range}\\
+=\vec{A}\vec{v}
 \end{align}
+Now, there can be two cases here, transformation of linearly independent vector can be independent or it can be dependent.Considering the first case and \eqref{range} we can say that,
+\begin{align}
+Range(T)=\text{columnspace of} \myvec{a&c\\b&d}
+\end{align}
+Now, considering the case when linear transformation will be linearly dependent,
+\begin{align}
+Range(T)=\text{columnspace of} \myvec{a\\b}
+\end{align}
+Now, considering that vectors $\in_1$ and $\in_2$ itself are linearly dependent.Let $\vec{v}$=$\in_1$ + $\in_2$
+\begin{align}
+T(\vec{v})=T(\in_1)+T(\in_2)\\
+=T(\in_1)+T(k\in_1)\\
+=(k+1)T(\in_1)\\
+=(k+1)\myvec{a\\b}
+\end{align}
+We can see from above equation that when $\in_1$ and $\in_2$ as linearly dependent then the transformation T will be along the line only.
+\begin{tabular}{|c|c|} \hline
+\textbf{Vectors Independent} & \textbf{Vectors Dependent}  \\ \hline
+\makecell{T(\vec{v})=\myvec{a&c\\b&d}\myvec{k_1\\k_2} & T(\vec{v})=(k+1)\myvec{a\\b} } \\ \hline
+\makecell{Output:& Output:
+          \\On the plane & On the line \\\hline}
+\end{tabular}
 \end{document}
 
