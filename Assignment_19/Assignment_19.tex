@@ -130,27 +130,36 @@
 \section{\textbf{Solution}}
 We know that,
 \begin{align}
-[T\alpha]_{\beta^{'}}=\vec{A}[\alpha]_{\beta}\label{T}
+[T\alpha]_{\beta}=\vec{A}[\alpha]_{\beta^{'}}\label{T}
 \end{align}
 where $\vec{A}$ is called the matrix of T relative to ordered basis $\beta$,$\beta^{'}$
 Using the ordered basis,
 \begin{align}
-\beta=\left\{\myvec{1\\0\\0},\myvec{0\\1\\0},\myvec{0\\0\\1}\right\}\\
-\beta^{'}=\left\{\myvec{1\\0},\myvec{0\\1}\right\}
+\beta=\myvec{1&0&0\\0&1&0\\0&0&1}\\
+\beta^{'}=\myvec{1&0\\0&1}
+\end{align}
+Let,
+\begin{align}
+\vec{V}_j=[T\alpha_j]_{\beta}\\
+\vec{V}=\myvec{\vec{V}_1&\vec{V}_2&\vec{V}_3}
 \end{align}
 Using the given transformation,
 \begin{align}
-T\myvec{1\\0\\0}=\myvec{1&-1}\myvec{1&0\\0&1}\\
-T\myvec{0\\1\\0}=\myvec{1&0}\myvec{1&0\\0&1}\\
-T\myvec{0\\0\\1}=\myvec{0&2}\myvec{1&0\\0&1}
+T\myvec{1\\0\\0}=\myvec{1\\-1}\\
+T\myvec{0\\1\\0}=\myvec{1\\0}\\
+T\myvec{0\\0\\1}=\myvec{0\\2}
 \end{align}
-From \eqref{T} we can say that,
+So,T($\vec{\beta}$) can be written as,
 \begin{align}
-[T\vec{\alpha}]_{\beta^{'}}=\myvec{T(\vec{\alpha_1})&T(\vec{\alpha_2})&T(\vec{\alpha_3})}[\vec{\alpha}]_{\beta}
+\vec{V}=\myvec{1&1&0\\-1&0&2}
 \end{align}
-So, T relative to the pair $\beta$, $\beta^{'}$ will be,
+Now, since the transformation has to be found relative to the pair $\vec{\beta}$, $\vec{\beta^{'}}$ we can rewrite the equation in the question as,
 \begin{align}
-\myvec{1&1&0\\-1&0&2}
+\myvec{1&0&\vline&1&1&0\\0&1&\vline&-1&0&2}
+\end{align}
+but from here we can see that $\vec{\beta^{'}}$ is already an identity matrix and hence no row reduction is required. So by using \eqref{T} we can say that,
+\begin{align}
+[T\alpha]_{\beta}=\myvec{1&1&0\\-1&0&2}[\alpha]_{\beta^{'}}
 \end{align}
 \end{document}
 
