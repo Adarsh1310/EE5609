@@ -138,20 +138,17 @@ Using the ordered basis,
 \beta=\myvec{1&0&0\\0&1&0\\0&0&1}\\
 \beta^{'}=\myvec{1&0\\0&1}
 \end{align}
-Let,
+Now, Let's consider the equation given in the question,
 \begin{align}
-\vec{V}_j=[T\alpha_j]_{\beta}\\
-\vec{V}=\myvec{\vec{V}_1&\vec{V}_2&\vec{V}_3}
+T\myvec{x_1\\x_2\\x_3}=\myvec{x_1+x_2\\2x_3-x_1}
 \end{align}
-Using the given transformation,
+R.H.S of the equation can be considered as a product of 2$\times$3 and 3$\times$1 matrices,
 \begin{align}
-T\myvec{1\\0\\0}=\myvec{1\\-1}\\
-T\myvec{0\\1\\0}=\myvec{1\\0}\\
-T\myvec{0\\0\\1}=\myvec{0\\2}
+=\myvec{1&1&0\\-1&0&2}\myvec{x_1\\x_2\\x_3}
 \end{align}
-So,$\vec{V}$ can be written as,
+Hence the transformation matrix is,
 \begin{align}
-\vec{V}=\myvec{1&1&0\\-1&0&2}
+\myvec{1&1&0\\-1&0&2}
 \end{align}
 Now, since the transformation has to be found relative to the pair $\vec{\beta}$, $\vec{\beta^{'}}$ we should row reduce,
 \begin{align}
