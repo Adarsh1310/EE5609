@@ -131,26 +131,29 @@ Let, $g = T^ty$ and find $g(x_1,x_2)$
 \section{\textbf{Solution}}
 The linear functional $f$ on $\mathbb{F}^2$ is defined by,
 \begin{align}
-f(x_1,x_2) &= \vec{a^T}\vec{x}
-\quad{\text{$\forall (x_1,x_2) \in \mathbb{F}^2$}}\label{def}
+f(\vec{x}) &= \vec{a^T}\vec{x}
+\quad{\text{$\forall \vec{x} \in \mathbb{F}^2$}}\label{def}
 \end{align}
 where,
 \begin{align}
-\vec{a} &= \myvec{a\\b}\\
-\vec{x} &= \myvec{x_1\\x_2}
+\vec{a} &= \myvec{a\\b}
 \end{align}
 We use the following theorem,\\
 Let $\mathbb{V}$ and $\mathbb{W}$ be vector spaces, over the field $F$. For each linear transformation $T: \mathbb{V} \xrightarrow{} \mathbb{W}$, there is a unique linear transformation $T^t: \mathbb{W}^* \xrightarrow{} \mathbb{V}^*$ such that,
 \begin{align}
 (T^tg)(\alpha) &= g(T\alpha)\label{theorem}
 \end{align}
-$\forall (x_1,x_2) \in \mathbb{F}^2$ the given linear operator $T$ defined as,
+$\forall (\vec{x}) \in \mathbb{F}^2$ the given linear operator $T$ defined as,
 \begin{align}
-T(x_1,x_2) &= \vec{A}\vec{x}
+T(\vec{x}) &= \vec{A}\vec{x}
+\end{align}
+Where,
+\begin{align}
+\vec{A}=\myvec{1&-1\\1&1}
 \end{align}
 Hence,
 \begin{align}
-\vec{A}\vec{x}= \myvec{x_1-x_2\\x_1+x_2} \label{qn}
+\vec{A}\vec{x}=\myvec{1&-1\\1&1}\vec{x} \label{qn}
 \end{align}
 Consider the following mapping,
 \begin{align}
@@ -158,13 +161,13 @@ g = T^tf\label{map}
 \end{align}
 Now,
 \begin{align}
-g(x_1,x_2) &= T^tf(x_1,x_2)&\label{ABC}
+g(\vec{x}) &= T^tf(\vec{x})&\label{ABC}
 \end{align}
 Using \eqref{theorem} in \eqref{ABC},
 \begin{align}
-&= f(T(x_1,x_2))\\
+&= f(T(\vec{x}))\\
 &= \vec{a^T}\vec{A}\vec{x}\\
-&= \vec{a^T}\myvec{x_1-x_2\\x_1+x_2}\\
+&= \vec{a^T}\myvec{1&-1\\1&1}\vec{x}\\
 &= a(x_1-x_2)+b(x_1+x_2) \label{ans}
 \end{align}
 \end{document}
