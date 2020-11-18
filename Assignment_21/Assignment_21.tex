@@ -141,12 +141,16 @@ Now the characteristic equation of $\vec{A}$ is given by,
 \begin{align}
 \det{(\vec{A} - \lambda \vec{I})} =&0\\
 =&\myvec{1-\lambda&0&0\\0&-\lambda&1\\0&-2&-1-\lambda}\\
-&\implies(1-\lambda)(\lambda^2 +\lambda+2) =0\label{eqEigen}
+&\implies(1-\lambda)(\lambda^2 +\lambda+2) =0
 \end{align}
-Where $\vec{I}$ is $3 \times 3$ Identity matrix. Now using Cayley Hamilton Theorem we get from \eqref{eqEigen} the following,
+Now, simplifying the above equation,
 \begin{align}
-(\vec{I}-\vec{A})(\vec{A}^2 +\vec{A}+2) =0\\
-\vec{A}^2 +\vec{A}+2\vec{I}-\vec{A}^3-\vec{A}^2-2\vec{A} =0\\
+(1-\lambda)(\lambda^2 +\lambda+2) =0\\
+\lambda^2 +\lambda+2-\lambda^3-\lambda^2-2\lambda=0\\
+\lambda^3=2-\lambda
+\end{align}
+ Now using Cayley Hamilton Theorem we get,
+\begin{align}
 \vec{A}^3=2\vec{I}-\vec{A}
 \end{align}
 Hence the polynomial $f(\vec{A})$ can be written using the characteristic function of $\vec{A}$ as follows,
