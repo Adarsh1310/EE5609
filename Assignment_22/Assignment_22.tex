@@ -134,17 +134,21 @@ p=(x-2)(x-3)(x-1)
 \section{\textbf{Solution}}
 \begin{enumerate}
 \item{
-We have been given that,\begin{align}p(x)=(x-2)(x-3)(x-1)\end{align} Now to find p($\vec{A}$),
+Since $\vec{A}$ is a diagonal matrix, It's characteristic polynomial is,
 \begin{align}
-p(\vec{A})&=(\vec{A}-2)(\vec{A}-3)(\vec{A}-1)\end{align}
-\begin{multline}
-&=\myvec{0&0&0&0\\0&0&0&0\\0&0&1&0\\0&0&0&-1}\myvec{-1&0&0&0\\0&-1&0&0\\0&0&0&0\\0&0&0&-2}\times\\\myvec{1&0&0&0\\0&1&0&0\\0&0&2&0\\0&0&0&0}
-\end{multline}
-\begin{align}
-&=\myvec{0&0&0&0\\0&0&0&0\\0&0&1&0\\0&0&0&-1}\myvec{-1&0&0&0\\0&-1&0&0\\0&0&0&0\\0&0&0&0}\\
-&=\myvec{0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&0}
+\det{(\vec{A} - x \vec{I})} =&0\\
+f(x)=(x-2)^2(x-3)(x-1)=0\label{fx}
 \end{align}
-Hence we proved that p($\vec{A}$)=0 }
+From, \eqref{fx} and using Cayley Hamilton Theorem,
+\begin{align}
+(\vec{A}-2)^2(\vec{A}-3)(\vec{A}-1)=0
+\end{align}
+Now,
+\begin{align}
+f(\vec{A})=0\\
+\implies p(\vec{A})=0
+\end{align}
+Hence Proved}
 \item{Using Lagrange Interpolation,
 \begin{align}
 P_1(x)=\frac{(x-3)(x-1)}{(2-3)(2-1)}\\
