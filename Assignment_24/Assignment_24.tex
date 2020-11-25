@@ -122,7 +122,7 @@
   This documents solves a problem based on Jordan Form.
   \end{abstract}
 \section{\textbf{Problem}}
-If $\vec{N}$ is a nilpotent 3 X 3 matrix over C, prove that $\vec{A}$ = $\vec{I}$ + $\frac{1}{2}\vec{N}$ - $\frac{1}{8}\vec{N}^{2}$ satisfies $\vec{A}^2$ = $\vec{I}$ + $\vec{N}$, i.e., $\vec{A}$ is a square root of $\vec{I}$ + $\vec{N}$. Use the binomial series for $(1 + t)^\frac{1}{2}$ to obtain a similar formula for a square root of $\vec{I}$ + $\vec{N}$, where $\vec{N}$ is any nilpotent n X n matrix over C.
+If $\vec{N}$ is a nilpotent 3 $\times$ 3 matrix over C, prove that $\vec{A}$ = $\vec{I}$ + $\frac{1}{2}\vec{N}$ - $\frac{1}{8}\vec{N}^{2}$ satisfies $\vec{A}^2$ = $\vec{I}$ + $\vec{N}$, i.e., $\vec{A}$ is a square root of $\vec{I}$ + $\vec{N}$. Use the binomial series for $(1 + t)^\frac{1}{2}$ to obtain a similar formula for a square root of $\vec{I}$ + $\vec{N}$, where $\vec{N}$ is any nilpotent n $\times$ n matrix over C.
 \section{\textbf{Solution}}
 We know that $\vec{N}^3$=0 since the minimal polynomial of $\vec{N}$ is $x^3$,So,
 \begin{align}
@@ -130,14 +130,27 @@ We know that $\vec{N}^3$=0 since the minimal polynomial of $\vec{N}$ is $x^3$,So
 =\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2+\frac{1}{4}\vec{N}^2-\frac{1}{8}\vec{N}^2\\
 =\vec{I}+\vec{N}
 \end{align}
-Now using Taylor's Formula on $(1+t)^{1/2}$,
+Expanding $(1+t)^{1/2}$,
 \begin{align}
-=1+\sum_{i=1}{\frac{1}{i!}[(1+t)^{1/2}]^{i}t^{i}}\\
-=1+\sum_{i=1}{(-1)^{i+1}\frac{(2i-3)t^{i}}{i!2^{i}}}
+(1+t)^{1/2}=\sum_{k=0}^\infty\binom{1/2}{k}t^k
 \end{align}
-So square root of $\vec{I}+\vec{N}$ where $\vec{N}$ is n $\times$ n nilpotent matrix can be,
+Here,
 \begin{align}
-=\vec{I}+\sum_{i=1}^{n-1}{(-1)^{i+1}\frac{(2i-3)\vec{N}^{i}}{i!2^{i}}}
+\binom{1/2}{k}
+&=\frac{\frac12(\frac12-1)(\frac12-2)\cdots(\frac12-k+1)}{k!}\\
+&=\frac{(-1)^{k-1}}{2^kk!}1\cdot3\cdot5\cdots(2k-3)\\
+&=\frac{(-1)^{k-1}}{2^kk!}\frac{(2k-2)!}{2^{k-1}(k-1)!}\\
+&=\frac{(-1)^{k-1}}{k2^{2k-1}}\binom{2k-2}{k-1}
+\end{align}
+Thus,
+\begin{align}
+(1+t)^{1/2}
+&=1-\sum_{k=1}^\infty\frac2k\binom{2k-2}{k-1}\left(-\frac t4\right)^k\\
+&=1-\sum_{k=0}^\infty\frac2{k+1}\binom{2k}{k}\left(-\frac t4\right)^{k+1}
+\end{align}
+So a square root for $\vec{I}$+$\vec{N}$ where $\vec{N}$ is a n$\times$ n nilpotent matrix can be,
+\begin{align}
+&=\vec{I}-\sum_{k=0}^{n-1}\frac2{k+1}\binom{2k}{k}\left(-\frac {\vec{N}}{4}\right)^{k+1}
 \end{align}
 \end{document}
 
